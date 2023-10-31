@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/* Definimos las Custom properties */
+:root {
+  /* Colores */
+  --negro: #393939;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+/* @media (prefers-color-scheme: dark) {
+  :root{
+      --negro         : #ececec;
+  }
+} */
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* @media (prefers-contrast: high){
+    :root{}
+} */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+/* @media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+} */
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */ /* object-fit: cover;  */
+  /* (Opcional) */ /* object-position: center center; */
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+/* ::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */ /* appearance: none; */
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*---------- Font.Famylys ----------*/
+/* font-family: 'Alegreya', serif; */
+/* font-family: 'Philosopher', sans-serif; */
+/*---------- Colores ----------*/
+.header {
+  background-color: lightblue;
+  width: 100%;
+  min-height: 5rem;
+  padding: 1rem 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+.header .header__logo .header__title {
+  /* background-color: red; */
+}
+.header .header__logo .header__title .header__link {
+  /* background-color: pink; */
+  width: 100%;
+  min-height: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header__title {
+  /* background-color: red; */
+}
+.header .header__title .header__link {
+  /* background-color: pink; */
+  width: 100%;
+  min-height: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header__title {
+  /* background-color: red; */
+}
+.header .header__title .header__link {
+  /* background-color: pink; */
+  width: 100%;
+  min-height: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header__title {
+  /* background-color: red; */
+}
+.header .header__title .header__link {
+  /* background-color: pink; */
+  width: 100%;
+  min-height: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header__nav {
+  /* background-color: red; */
+  min-height: 1rem;
+}
+.header .header__nav .nav__list {
+  /* background-color: pink; */
+  width: 100%;
+  min-height: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header__nav .nav__list .nav__item {
+  /* background-color: yellow; */
+  margin: 1rem;
+}
+.main {
+  background-color: rgb(242, 228, 249);
+  /* margin: 1rem 0; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__home {
+  width: 100%;
+  min-height: 80vh;
+  /* margin: 1rem 0; */
+  font-family: Philosopher;
+}
+.main .main__home .main__hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__home .main__hero .hero__home {
+  width: 90%;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 1rem;
+  /* .vertical-flip {
+      display: inline-block;
+      transform: scaleX(-1);
+  } */
+}
+.main .main__home .main__hero .hero__home .hero__title {
+  color: rgb(48, 39, 39);
+  font-size: 8rem;
+  grid-column: 1/9;
+  grid-row: 3/4;
+}
+.main .main__home .main__hero .hero__home .hero__subtitle {
+  color: rgb(48, 39, 39);
+  font-size: 6rem;
+  grid-column: 1/13;
+  grid-row: 4/5;
+  text-align: end;
+}
+.main .main__works {
+  width: 90%;
+  min-height: 80vh;
+  /*background-color: lightgreen; */
+  /* margin: 1rem 0; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+}
+.main .main__works .works__info .works__tittle {
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 8rem;
+}
+.main .main__works .works__info .works__text {
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 2rem;
+}
+.main .main__works .works__cards {
+  background-color: lightcoral;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.main .main__works .works__cards .card {
+  background-color: blanchedalmond;
+  width: 100%;
+  min-height: 40vh;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .main__works .works__cards .card .card__link .card__figure {
+  width: 100%;
+  background-color: blue;
+}
+.main .main__works .works__cards .card .card__link .card__figure .card__img {
+  width: 100%;
+  background-color: red;
+}
+.main .main__works .works__cards .card .card__link .card__title {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row rap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__about {
+  width: 90%;
+  min-height: 80vh;
+  /* margin: 1rem 0; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: end;
+}
+.main .main__about .about__title {
+  margin: 0 0 1rem 0;
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 8rem;
+}
+.main .main__about .about__text {
+  max-width: 40rem;
+  margin: 0 0 1rem 0;
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 1.5rem;
+  text-align: left;
+}
+.main .main__contact {
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main .main__contact .contac__text .contac__title {
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 3rem;
+}
+.main .main__contact .contact__button {
+  width: 100%;
+  max-width: 20rem;
+  min-height: 5rem;
+  border-radius: 28px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black;
+  font-family: Alegreya;
+  color: rgb(48, 39, 39);
+  font-size: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__contact .contact__socialmedia {
+  padding: 1rem;
+  background-color: lightsalmon;
+  width: 100%;
+  max-width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.main .main__contact .contact__socialmedia .socialmedia__item {
+  background-color: blue;
+}
+.main .main__contact .contact__socialmedia .socialmedia__item .socialmedia__link {
+  background-color: chartreuse;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__contact .contact__socialmedia .socialmedia__item .socialmedia__link .contact__svg {
+  background-color: red;
+  width: 100%;
+  height: 3rem;
+}
+
+.footer {
+  background-color: aqua;
+  width: 100%;
+  /*     margin: 1rem 0; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__container {
+  width: 80%;
+  min-height: 10vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer__container .footer__switch .switch__svg {
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+}/*# sourceMappingURL=main.css.map */

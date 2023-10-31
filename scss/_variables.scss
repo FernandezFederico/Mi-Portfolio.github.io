@@ -1,0 +1,21 @@
+/*---------- Font.Famylys ----------*/
+
+/* font-family: 'Alegreya', serif; */
+/* font-family: 'Philosopher', sans-serif; */
+
+$fuente : (
+    "principal": Philosopher,
+    "secundario": Alegreya,
+);
+
+/*---------- Colores ----------*/
+$color1 : (
+    "principal": rgba(48, 39, 39, 1),
+    "secundario": rgba(186, 45, 45, 1),
+    "terciario": rgba(242, 134, 27, 1),
+);
+$color2 : (
+    "principal": rgba(131, 156, 181, 1),
+    "secundario":rgba(150, 215, 235, 1),
+    "terciario": rgba(242, 228, 249, 1),
+);

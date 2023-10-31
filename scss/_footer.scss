@@ -1,0 +1,27 @@
+.footer {
+    background-color: aqua;
+    width: 100%;
+
+/*     margin: 1rem 0; */
+
+    
+    @include flexible(row, nowrap, center, center);
+
+    .footer__container {
+        width: 80%;
+        min-height: 10vh;
+
+        @include flexible(row, nowrap, space-between, center);
+
+
+        .footer__text {}
+
+        .footer__switch {
+            .switch__svg {
+                background-color: red;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}

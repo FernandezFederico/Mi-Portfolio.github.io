@@ -1,0 +1,218 @@
+.main {
+    background-color: map-get($map: $color2, $key: "terciario");
+    /* margin: 1rem 0; */
+
+    @include flexible(column, nowrap, center, center);
+
+
+    .main__home {
+        width: 100%;
+        min-height: 80vh;
+        /* margin: 1rem 0; */
+        font-family: map-get($map: $fuente, $key: "principal");
+
+
+
+        .main__hero {
+            width: 100%;
+            min-height: 100vh;
+            @include flexible(column, wrap, center, center);
+
+            .hero__home {
+                width: 90%;
+                min-height: 90vh;
+                display: grid;
+                grid-template-columns: repeat(12, auto);
+                grid-template-rows: repeat(5, auto);
+                grid-gap: 1rem;
+
+
+
+                /* .vertical-flip {
+                    display: inline-block;
+                    transform: scaleX(-1);
+                } */
+
+                .hero__title {
+                    color: map-get($map: $color1, $key: "principal");
+                    font-size: 8rem;
+                    
+                    grid-column: 1 / 9;
+                    grid-row: 3 / 4;
+                }
+
+                .hero__subtitle {
+                    color: map-get($map: $color1, $key: "principal");
+                    font-size: 6rem;
+
+                    grid-column: 1 / 13;
+                    grid-row: 4 / 5;
+                    text-align: end;
+
+
+                }
+            }
+        }
+    }
+
+    .main__works {
+        width: 90%;
+        min-height: 80vh;
+        /*background-color: lightgreen; */
+        /* margin: 1rem 0; */
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
+
+
+        .works__info {
+
+            .works__tittle {
+                font-family: map-get($map: $fuente, $key: "secundario");
+                color: map-get($map: $color1, $key: "principal");
+                font-size: 8rem;
+            }
+
+            .works__text {
+                font-family: map-get($map: $fuente, $key: "secundario");
+                color: map-get($map: $color1, $key: "principal");
+                font-size: 2rem;
+            }
+        }
+
+        .works__cards {
+            background-color: lightcoral;
+            margin: 1rem 0;
+
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+
+            .card {
+                background-color: blanchedalmond;
+                width: 100%;
+     
+                min-height: 40vh;
+                position: relative;
+
+                @include flexible(row, nowrap, space-around, center);
+
+                .card__link {
+                    .card__figure {
+                        width: 100%;
+                        background-color: blue;
+
+                        .card__img {
+                            width: 100%;
+                            background-color: red;
+                        }
+                    }
+
+                    .card__title {
+                        background-color: rgb(255, 255, 255, 0.5);
+                        width: 100%;
+                        height: 100%;
+
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+
+                        @include flexible(row, rap, center, center);
+
+                    }
+                }
+            }
+        }
+    }
+
+    .main__about {
+        width: 90%;
+        min-height: 80vh;
+        /* margin: 1rem 0; */
+        @include flexible(column, nowrap, center, end);
+
+        .about__title {
+            margin: 0 0 1rem 0;
+            font-family: map-get($map: $fuente, $key: "secundario");
+            color: map-get($map: $color1, $key: "principal");
+            font-size: 8rem;
+        }
+
+        .about__text {
+            max-width: 40rem;
+            margin: 0 0 1rem 0;
+
+            font-family: map-get($map: $fuente, $key: "secundario");
+            color: map-get($map: $color1, $key: "principal");
+            font-size: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    .main__contact {
+        width: 100%;
+        min-height: 30vh;
+
+        @include flexible(column, nowrap, center, center);
+        gap: 1rem;
+
+        .contac__text{
+            .contac__title{
+                font-family: map-get($map: $fuente, $key: "secundario");
+                color: map-get($map: $color1, $key: "principal");
+                font-size: 3rem;
+            }
+        }
+
+        .contact__button {
+            width: 100%;
+            max-width: 20rem;
+            min-height: 5rem;
+            border-radius: 28px;
+            padding: 10px 20px 10px 20px;
+            border: 1px solid black;
+
+
+            font-family: map-get($map: $fuente, $key: "secundario");
+            color: map-get($map: $color1, $key: "principal");
+            font-size: 3rem;
+
+            @include flexible(row, nowrap, center, center);
+        }
+
+
+        .contact__socialmedia {
+            padding: 1rem;
+            background-color: lightsalmon;
+            width: 100%;
+            max-width: 80%;
+
+
+            @include flexible(row, wrap, space-around, center);
+            gap: 1rem;
+
+            .socialmedia__item {
+                background-color: blue;
+
+
+                .socialmedia__link { 
+                    background-color: chartreuse;
+                    padding: 10px;
+                    
+                    @include flexible(row, nowrap, center, center);
+                    
+                    .contact__svg {
+                        background-color: red;
+                        width: 100%;
+                        height: 3rem;
+                    }
+
+                }
+
+    
+            }
+        }
+    }
+}
