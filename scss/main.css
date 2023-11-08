@@ -283,7 +283,7 @@ body {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
@@ -328,17 +328,18 @@ body {
 }
 .main .main__works {
   width: 90%;
-  min-height: 70vh;
+  min-height: 80vh;
+  margin-top: 4rem;
   /*background-color: lightgreen; */
   /* margin: 1rem 0; */
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
+  grid-gap: 2rem;
 }
 .main .main__works .works__info {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .main .main__works .works__info .works__tittle {
@@ -353,7 +354,8 @@ body {
 }
 .main .main__works .works__info .works__buton {
   width: 100%;
-  min-height: 30rem;
+  height: auto;
+  margin-top: 4rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -362,13 +364,12 @@ body {
 .main .main__works .works__info .works__buton .works__link {
   width: 100%;
   max-width: 10rem;
-  height: 100%;
-  max-height: 10rem;
+  min-height: 10rem;
   border-radius: 50%;
   border: 2px solid #A6A6A6;
   text-align: center;
   display: flex;
-  flex-flow: colums nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   font-family: Alegreya;
@@ -378,22 +379,25 @@ body {
 .main .main__works .works__cards {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: flex-end;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 .main .main__works .works__cards .card {
   width: 100%;
+  max-width: 400px;
   position: relative;
 }
 .main .main__works .works__cards .card .card__link {
   width: 100%;
 }
+.main .main__works .works__cards .card .card__link .card__figure {
+  width: 100%;
+  height: auto;
+}
 .main .main__works .works__cards .card .card__link .card__figure .card__img {
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
   border-radius: 2rem;
 }
 .main .main__works .works__cards .card .card__link .card__title {
@@ -424,6 +428,7 @@ body {
 .main .main__about {
   width: 90%;
   min-height: 80vh;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
@@ -483,7 +488,8 @@ body {
 }
 .main .main__contact {
   width: 90%;
-  min-height: 90vh;
+  min-height: 80vh;
+  margin-top: 4rem;
   gap: 1rem;
   display: flex;
   flex-flow: column nowrap;
@@ -491,14 +497,18 @@ body {
   align-items: center;
 }
 .main .main__contact .contact__text {
-  /* background-color: rgb(200, 255, 0); */
   width: 100%;
   min-height: 60vh;
-  gap: 3rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+.main .main__contact .contact__text .contact__subtitle {
+  font-family: Alegreya;
+  color: #A6A6A6;
+  font-size: 1.5rem;
+  text-align: center;
 }
 .main .main__contact .contact__text .contact__title {
   /* background-color: blanchedalmond; */
@@ -508,7 +518,6 @@ body {
   text-align: center;
 }
 .main .main__contact .contact__text .contact__buton {
-  /* background-color: brown; */
   width: 100%;
   min-height: 20rem;
   display: flex;
@@ -529,7 +538,7 @@ body {
   align-items: center;
   font-family: Alegreya;
   color: #A6A6A6;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .main .main__contact .contact__socialmedia {
   /* background-color: lightsalmon; */

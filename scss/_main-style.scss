@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
 
-  @include flexible(column, nowrap, center, center);
+  @include flexible(row, wrap, center, center);
 
   .main__home {
     width: 100%;
@@ -50,16 +50,19 @@
 
   .main__works {
     width: 90%;
-    min-height: 70vh;
+    min-height: 80vh;
+    margin-top: 4rem;
+
+
     /*background-color: lightgreen; */
     /* margin: 1rem 0; */
 
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 2rem;
+    grid-gap: 2rem;
 
     .works__info {
-      @include flexible(column, wrap, center, center);
+      @include flexible(column, wrap, space-around, center);
 
       .works__tittle {
         font-family: map-get($map: $fuente, $key: "secundario");
@@ -75,20 +78,21 @@
 
       .works__buton {
         width: 100%;
-        min-height: 30rem;
+        height: auto;
+        margin-top: 4rem;
+   
 
         @include flexible(column, nowrap, center, center);
 
         .works__link {
           width: 100%;
           max-width: 10rem;
-          height: 100%;
-          max-height: 10rem;
+          min-height: 10rem;
           border-radius: 50%;
           border: 2px solid map-get($map: $color, $key: "quinto");
           text-align: center;
 
-          @include flexible(colums, nowrap, center, center);
+          @include flexible(row, nowrap, center, center);
 
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");
@@ -98,29 +102,25 @@
     }
 
     .works__cards {
-      width: 100%;
-      
+      width: 100%;      
 
-      @include flexible(row, nowrap, center, center);
-      gap: 1.5rem;
+      @include flexible(row, wrap, flex-end, center);
+      gap: 2rem;
 
       .card {
         width: 100%;
-        position: relative;
-        
-        
+        max-width: 400px;
+        position: relative;       
 
         .card__link {
           width: 100%;
           
-
           .card__figure {
-
+            width: 100%;
+            height: auto;
 
             .card__img {
               width: 100%;
-              object-fit: fill;
-
               border-radius: 2rem;
             }
           }
@@ -159,6 +159,7 @@
   .main__about {
     width: 90%;
     min-height: 80vh;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
@@ -219,18 +220,25 @@
 
   .main__contact {
     width: 90%;
-    min-height: 90vh;
+    min-height: 80vh;
+    margin-top: 4rem;
     gap: 1rem;
 
     @include flexible(column, nowrap, center, center);
 
     .contact__text {
-      /* background-color: rgb(200, 255, 0); */
       width: 100%;
       min-height: 60vh;
-      gap: 3rem;
+   
 
       @include flexible(column, nowrap, center, center);
+
+      .contact__subtitle{
+        font-family: map-get($map: $fuente, $key: "secundario");
+        color: map-get($map: $color, $key: "quinto");
+        font-size: 1.5rem;
+        text-align: center;
+      }
 
       .contact__title {
         /* background-color: blanchedalmond; */
@@ -241,7 +249,6 @@
       }
 
       .contact__buton {
-        /* background-color: brown; */
         width: 100%;
         min-height: 20rem;
 
@@ -259,7 +266,7 @@
 
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }
