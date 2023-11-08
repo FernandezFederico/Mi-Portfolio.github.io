@@ -1,0 +1,75 @@
+.circulos {
+    background-color: map-get($map: $color, $key: "secundario");
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    filter: blur(50px);
+    
+    animation: svg 70s linear infinite alternate;
+
+    .circulos__svg {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+
+        .path {
+            fill: map-get($map: $color, $key: "primario");
+        }
+
+
+        animation: svg 20s linear infinite alternate;
+    }
+
+    .svg1 {
+        top: 0;
+        left: 0;
+
+        width: 50%;
+        height: 50%;
+
+
+    }
+
+    .svg2 {
+        top: 0;
+        right: 0;
+
+    }
+
+    .svg3{
+        bottom: 0;
+        left: 0;
+
+        
+    }
+
+    .svg4 {
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        height: 60%;
+
+
+    }
+
+    @keyframes svg {
+        from {
+            transform: rotate(0deg) scale(2);
+        }
+
+        to {
+            transform: rotate(360deg) scale(3);
+
+        }
+    }
+
+
+
+
+
+}

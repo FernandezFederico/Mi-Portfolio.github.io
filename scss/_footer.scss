@@ -1,6 +1,7 @@
 .footer {
-    background-color: aqua;
     width: 100%;
+    position: relative;
+    z-index: 1;
 
 /*     margin: 1rem 0; */
 
@@ -14,7 +15,10 @@
         @include flexible(row, nowrap, space-between, center);
 
 
-        .footer__text {}
+        .footer__text {
+            font-family: map-get($map: $fuente, $key:"principal");
+            color: map-get($map: $color, $key: "quinto");
+        }
 
         .footer__switch {
             .switch__svg {
