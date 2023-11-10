@@ -1,5 +1,5 @@
 .circulos {
-    background-color: map-get($map: $color, $key: "secundario");
+    background-color: map-get($map: $color, $key: "terciario");
     width: 100%;
     height: 100%;
     
@@ -14,8 +14,8 @@
 
     .circulos__svg {
         position: absolute;
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
 
         .path {
             fill: map-get($map: $color, $key: "primario");
@@ -29,8 +29,7 @@
         top: 0;
         left: 0;
 
-        width: 50%;
-        height: 50%;
+        
 
 
     }
@@ -48,14 +47,7 @@
         
     }
 
-    .svg4 {
-        bottom: 0;
-        right: 0;
-        width: 60%;
-        height: 60%;
 
-
-    }
 
     @keyframes svg {
         from {
