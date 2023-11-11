@@ -7,7 +7,7 @@ const isLinckHoverClass = "isLinckHover";
 const customCursorActiveClass = "customCursorActive";
 
 // Add event listeners
- export const cursorEvent = () => {
+export const cursorEvent = () => {
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mousedown", onMouseDown);
   document.addEventListener("mouseup", onMouseUp);

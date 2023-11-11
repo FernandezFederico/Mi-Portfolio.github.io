@@ -1,67 +1,51 @@
 .circulos {
-    background-color: map-get($map: $color, $key: "terciario");
-    width: 100%;
-    height: 100%;
-    
-    position: fixed;
+  background-color: map-get($map: $color, $key: "terciario");
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  filter: blur(50px);
+
+  animation: svg 70s linear infinite alternate;
+
+  .circulos__svg {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+
+    .path {
+      fill: map-get($map: $color, $key: "primario");
+    }
+
+    animation: svg 20s linear infinite alternate;
+  }
+
+  .svg1 {
     top: 0;
     left: 0;
-    z-index: 1;
+  }
 
-    filter: blur(50px);
-    
-    animation: svg 70s linear infinite alternate;
+  .svg2 {
+    top: 0;
+    right: 0;
+  }
 
-    .circulos__svg {
-        position: absolute;
-        width: 60%;
-        height: 60%;
+  .svg3 {
+    bottom: 0;
+    left: 0;
+  }
 
-        .path {
-            fill: map-get($map: $color, $key: "primario");
-        }
-
-
-        animation: svg 20s linear infinite alternate;
+  @keyframes svg {
+    from {
+      transform: rotate(0deg) scale(2);
     }
 
-    .svg1 {
-        top: 0;
-        left: 0;
-
-        
-
-
+    to {
+      transform: rotate(360deg) scale(3);
     }
-
-    .svg2 {
-        top: 0;
-        right: 0;
-
-    }
-
-    .svg3{
-        bottom: 0;
-        left: 0;
-
-        
-    }
-
-
-
-    @keyframes svg {
-        from {
-            transform: rotate(0deg) scale(2);
-        }
-
-        to {
-            transform: rotate(360deg) scale(3);
-
-        }
-    }
-
-
-
-
-
+  }
 }

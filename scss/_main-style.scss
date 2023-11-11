@@ -7,7 +7,6 @@
   .main__home {
     width: 100%;
     min-height: 80vh;
-    /* margin: 1rem 0; */
     font-family: map-get($map: $fuente, $key: "principal");
 
     .main__hero {
@@ -53,10 +52,6 @@
     min-height: 80vh;
     margin-top: 4rem;
 
-
-    /*background-color: lightgreen; */
-    /* margin: 1rem 0; */
-
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-gap: 2rem;
@@ -80,7 +75,6 @@
         width: 100%;
         height: auto;
         margin-top: 4rem;
-   
 
         @include flexible(column, nowrap, center, center);
 
@@ -102,7 +96,7 @@
     }
 
     .works__cards {
-      width: 100%;      
+      width: 100%;
 
       @include flexible(row, wrap, flex-end, center);
       gap: 2rem;
@@ -110,11 +104,11 @@
       .card {
         width: 100%;
         max-width: 400px;
-        position: relative;       
+        position: relative;
 
         .card__link {
           width: 100%;
-          
+
           .card__figure {
             width: 100%;
             height: auto;
@@ -229,11 +223,10 @@
     .contact__text {
       width: 100%;
       min-height: 60vh;
-   
 
       @include flexible(column, nowrap, center, center);
 
-      .contact__subtitle{
+      .contact__subtitle {
         font-family: map-get($map: $fuente, $key: "secundario");
         color: map-get($map: $color, $key: "quinto");
         font-size: 1.5rem;
@@ -241,7 +234,6 @@
       }
 
       .contact__title {
-        /* background-color: blanchedalmond; */
         font-family: map-get($map: $fuente, $key: "secundario");
         color: map-get($map: $color, $key: "quinto");
         font-size: 3rem;
@@ -272,7 +264,6 @@
     }
 
     .contact__socialmedia {
-      /* background-color: lightsalmon; */
       width: 100%;
       min-height: 8rem;
       gap: 1rem;
@@ -280,7 +271,6 @@
       @include flexible(row, nowrap, center, center);
 
       .socialmedia__item {
-        /* background-color: blue; */
         width: 100%;
 
         .socialmedia__link {

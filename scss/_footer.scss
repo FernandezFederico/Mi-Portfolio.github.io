@@ -1,31 +1,27 @@
 .footer {
-    width: 100%;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 
-/*     margin: 1rem 0; */
+  @include flexible(row, nowrap, center, center);
 
-    
-    @include flexible(row, nowrap, center, center);
+  .footer__container {
+    width: 80%;
+    min-height: 10vh;
 
-    .footer__container {
-        width: 80%;
-        min-height: 10vh;
+    @include flexible(row, nowrap, space-between, center);
 
-        @include flexible(row, nowrap, space-between, center);
-
-
-        .footer__text {
-            font-family: map-get($map: $fuente, $key:"principal");
-            color: map-get($map: $color, $key: "quinto");
-        }
-
-        .footer__switch {
-            .switch__svg {
-                background-color: red;
-                width: 2rem;
-                height: 2rem;
-            }
-        }
+    .footer__text {
+      font-family: map-get($map: $fuente, $key: "principal");
+      color: map-get($map: $color, $key: "quinto");
     }
+
+    .footer__switch {
+      .switch__svg {
+        background-color: red;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
 }

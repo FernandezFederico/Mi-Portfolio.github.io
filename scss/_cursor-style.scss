@@ -1,56 +1,46 @@
 .cursor {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 410;
-    pointer-events: none;
-    transition: none;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 410;
+  pointer-events: none;
+  transition: none;
 
+  .cursor__styles {
+    display: block;
+    width: 100%;
+    height: 100%;
 
+    border: 2px solid map-get($map: $color, $key: "quinto");
+    border-radius: 50%;
 
-    .cursor__styles {
-        display: block;
-        width: 100%;
-        height: 100%;
-
-
-        border: 2px solid map-get($map: $color, $key: "quinto");
-        border-radius: 50%;
-
-        transition: all 0.3s ease-out;
-        transform: scale(1) translateZ(0);
-
-
-    }
-
+    transition: all 0.3s ease-out;
+    transform: scale(1) translateZ(0);
+  }
 }
 
 .isClicked {
-
-    .cursor__styles {
-        transform: scale(.5) translateZ(0);
-    }
+  .cursor__styles {
+    transform: scale(0.5) translateZ(0);
+  }
 }
 
 .isHiden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .isLinckHover {
+  mix-blend-mode: difference;
 
-    mix-blend-mode: difference;
-
-    .cursor__styles {
-        transform: scale(1.5) translateZ(0);
-        background-color: map-get($map: $color, $key: "quinto");
-
-
-    }
+  .cursor__styles {
+    transform: scale(1.5) translateZ(0);
+    background-color: map-get($map: $color, $key: "quinto");
+  }
 }
 
 .customCursorActive {
-    * {
-        cursor: none;
-    }
+  * {
+    cursor: none;
+  }
 }

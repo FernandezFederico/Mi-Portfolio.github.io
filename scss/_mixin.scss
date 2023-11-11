@@ -5,7 +5,7 @@
   align-items: $align;
 }
 
-@mixin madia($medida : 480px) {
+@mixin madia($medida: 480px) {
   @media screen and (max-width: $medida) {
     @content;
   }
