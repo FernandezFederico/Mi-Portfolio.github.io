@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   z-index: 1;
+  overflow: hidden;
 
   filter: blur(50px);
 
@@ -16,6 +17,7 @@
     position: absolute;
     width: 60%;
     height: 60%;
+    
 
     .path {
       fill: map-get($map: $color, $key: "primario");
