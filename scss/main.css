@@ -170,10 +170,10 @@ body {
 
 .cursor {
   position: fixed;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   position: absolute;
-  z-index: 410;
+  z-index: 4;
   pointer-events: none;
   transition: none;
 }
@@ -199,7 +199,14 @@ body {
   mix-blend-mode: difference;
 }
 .isLinckHover .cursor__styles {
-  transform: scale(1.5) translateZ(0);
+  transform: scale(2.1) translateZ(0);
+  background-color: #a6a6a6;
+}
+
+.isTextHover {
+  mix-blend-mode: difference;
+}
+.isTextHover .cursor__styles {
   background-color: #a6a6a6;
 }
 
@@ -360,7 +367,7 @@ body::-webkit-scrollbar {
 .main .main__works .works__info .works__buton {
   width: 100%;
   height: auto;
-  margin-top: 4rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -435,31 +442,52 @@ body::-webkit-scrollbar {
   min-height: 80vh;
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 }
 .main .main__about .about__page {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 .main .main__about .about__page .about__figure {
-  background-color: aquamarine;
   width: 100%;
+  min-width: 20rem;
 }
 .main .main__about .about__page .about__figure .about__img {
   width: 100%;
+  border-radius: 2rem;
 }
-.main .main__about .about__page .about__buton {
+.main .main__about .about__info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main .main__about .about__info .about__title {
+  font-family: Alegreya;
+  color: #a6a6a6;
+  font-size: 8rem;
+  text-align: start;
+}
+.main .main__about .about__info .about__text {
+  max-width: 40rem;
+  font-family: Alegreya;
+  color: #a6a6a6;
+  font-size: 1.5rem;
+  text-align: start;
+}
+.main .main__about .about__info .about__buton {
   width: 100%;
+  margin-top: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
 }
-.main .main__about .about__page .about__buton .about__link {
+.main .main__about .about__info .about__buton .about__link {
   width: 100%;
   max-width: 10rem;
   min-height: 10rem;
@@ -470,23 +498,6 @@ body::-webkit-scrollbar {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-family: Alegreya;
-  color: #a6a6a6;
-  font-size: 1.5rem;
-}
-.main .main__about .about__info {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.main .main__about .about__info .about__title {
-  font-family: Alegreya;
-  color: #a6a6a6;
-  font-size: 8rem;
-}
-.main .main__about .about__info .about__text {
-  max-width: 40rem;
   font-family: Alegreya;
   color: #a6a6a6;
   font-size: 1.5rem;

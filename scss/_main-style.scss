@@ -74,7 +74,8 @@
       .works__buton {
         width: 100%;
         height: auto;
-        margin-top: 4rem;
+        margin-bottom: 5rem;
+
 
         @include flexible(column, nowrap, center, center);
 
@@ -155,25 +156,50 @@
     min-height: 80vh;
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 
     .about__page {
       width: 100%;
 
-      @include flexible(column, nowrap, space-around, center);
+      @include flexible(column, nowrap, flex-start, center);
 
       .about__figure {
-        background-color: aquamarine;
         width: 100%;
+        min-width: 20rem;
 
         .about__img {
           width: 100%;
+          border-radius: 2rem;
+          
         }
+      }
+
+      
+    }
+
+    .about__info {
+      @include flexible(column, wrap, flex-start, center);
+
+      .about__title {
+        font-family: map-get($map: $fuente, $key: "secundario");
+        color: map-get($map: $color, $key: "quinto");
+        font-size: 8rem;
+        text-align: start;
+        
+      }
+
+      .about__text {
+        max-width: 40rem;
+        font-family: map-get($map: $fuente, $key: "secundario");
+        color: map-get($map: $color, $key: "quinto");
+        font-size: 1.5rem;
+        text-align: start;
       }
 
       .about__buton {
         width: 100%;
+        margin-top: 5rem;
         @include flexible(column, nowrap, space-around, center);
 
         .about__link {
@@ -190,24 +216,6 @@
           color: map-get($map: $color, $key: "quinto");
           font-size: 1.5rem;
         }
-      }
-    }
-
-    .about__info {
-      @include flexible(column, wrap, space-around, center);
-
-      .about__title {
-        font-family: map-get($map: $fuente, $key: "secundario");
-        color: map-get($map: $color, $key: "quinto");
-        font-size: 8rem;
-      }
-
-      .about__text {
-        max-width: 40rem;
-
-        font-family: map-get($map: $fuente, $key: "secundario");
-        color: map-get($map: $color, $key: "quinto");
-        font-size: 1.5rem;
       }
     }
   }

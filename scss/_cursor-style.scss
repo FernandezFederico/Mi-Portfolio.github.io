@@ -1,16 +1,18 @@
 .cursor {
   position: fixed;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   position: absolute;
-  z-index: 410;
+  z-index: 4;
   pointer-events: none;
   transition: none;
+  
 
   .cursor__styles {
     display: block;
     width: 100%;
     height: 100%;
+    
 
     border: 2px solid map-get($map: $color, $key: "quinto");
     border-radius: 50%;
@@ -34,7 +36,14 @@
   mix-blend-mode: difference;
 
   .cursor__styles {
-    transform: scale(1.5) translateZ(0);
+    transform: scale(2.1) translateZ(0);
+    background-color: map-get($map: $color, $key: "quinto");
+  }
+}
+
+.isTextHover {
+  mix-blend-mode: difference;
+  .cursor__styles {
     background-color: map-get($map: $color, $key: "quinto");
   }
 }
