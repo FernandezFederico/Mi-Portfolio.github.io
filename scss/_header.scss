@@ -1,79 +1,36 @@
 .header {
-  background-color: lightblue;
   width: 100%;
   min-height: 5rem;
   padding: 1rem 5rem;
-
-  @include flexible(row, nowrap, space-between, center);
-
-  display: none;
-
-  .header__logo {
-    .header__title {
-      /* background-color: red; */
-
-      .header__link {
-        /* background-color: pink; */
-        width: 100%;
-        min-height: 1rem;
-
-        @include flexible(row, nowrap, space-around, center);
-      }
-    }
-  }
-
-  .header__title {
-    /* background-color: red; */
-
-    .header__link {
-      /* background-color: pink; */
-      width: 100%;
-      min-height: 1rem;
-
-      @include flexible(row, nowrap, space-around, center);
-    }
-  }
-
-  .header__title {
-    /* background-color: red; */
-
-    .header__link {
-      /* background-color: pink; */
-      width: 100%;
-      min-height: 1rem;
-
-      @include flexible(row, nowrap, space-around, center);
-    }
-  }
-
-  .header__title {
-    /* background-color: red; */
-
-    .header__link {
-      /* background-color: pink; */
-      width: 100%;
-      min-height: 1rem;
-
-      @include flexible(row, nowrap, space-around, center);
-    }
-  }
+  position: absolute;
+  z-index: 3;
+  @include flexible(row, nowrap, center, center);
 
   .header__nav {
-    /* background-color: red; */
     min-height: 1rem;
 
     .nav__list {
-      /* background-color: pink; */
       width: 100%;
       min-height: 1rem;
 
-      @include flexible(row, wrap, space-around, center);
+      @include flexible(row, nowrap, space-around, center);
 
       .nav__item {
-        /* background-color: yellow; */
         margin: 1rem;
+        border: 1px solid map-get($map: $color, $key: "quinto");
+        padding: 1rem;
+        border-radius: 30px;
+        &:hover {
+          background-color: map-get($map: $color, $key: "sexto");
+          transition: all .7s ease-in-out;
+        }
+        &:hover .nav__link {
+          color: map-get($map: $color, $key: "primario");
+        }
 
         .nav__link {
+          color: map-get($map: $color, $key: "quinto");
+          
         }
       }
     }

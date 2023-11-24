@@ -1,4 +1,3 @@
-
 const cursorInit = (cursorElement) => {
   const isClickedClass = "isClicked";
   const isHidenClass = "isHiden";
@@ -43,7 +42,10 @@ const cursorInit = (cursorElement) => {
 // aplica la class isLinckHoverClass al cursor al pasar el mouse por encima de un link
 const handleLinkHover = (cursorElement) => {
   const isLinckHoverClass = "isLinckHover";
-  document.querySelectorAll('img, a, button, .linkCustom, input[type="button"], input[type="submit"]')
+  document
+    .querySelectorAll(
+      'img, a, button, .link__custom, input[type="button"], input[type="submit"]'
+    )
     .forEach((link) => {
       link.addEventListener("mouseover", () => {
         cursorElement.classList.add(isLinckHoverClass);
@@ -56,15 +58,15 @@ const handleLinkHover = (cursorElement) => {
 
 const handleTextHover = (cursorElement) => {
   const isTextHoverClass = "isTextHover";
-  document.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    .forEach((text) => {
-      text.addEventListener("mouseover", () => {
-        cursorElement.classList.add(isTextHoverClass);
-      });
-      text.addEventListener("mouseleave", () => {
-        cursorElement.classList.remove(isTextHoverClass);
-      });
+  document.querySelectorAll("h1, h2, h3, h4, h5, h6, p").forEach((text) => {
+    text.addEventListener("mouseover", () => {
+      cursorElement.classList.add(isTextHoverClass);
     });
-}
+    text.addEventListener("mouseleave", () => {
+      cursorElement.classList.remove(isTextHoverClass);
+    });
+  });
+};
+
 
 export { cursorInit, handleLinkHover };
