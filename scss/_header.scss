@@ -8,6 +8,9 @@
 
   .header__nav {
     min-height: 1rem;
+    @include custom-media(0px, 638px) {
+      display: none;
+    }
 
     .nav__list {
       width: 100%;
