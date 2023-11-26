@@ -195,6 +195,9 @@ body.light .circulos .circulos__svg .path {
   border-radius: 50%;
   transition: all 0.3s ease-out;
 }
+body.light .cursor .cursor__styles {
+  border: 2px solid #0d0d0d;
+}
 
 .isClicked .cursor__styles {
   transform: scale(0.5) translateZ(0);
@@ -757,6 +760,9 @@ body.light .footer .footer__container .footer__text {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+body.light .header__btn {
+  border: 2px solid #0d0d0d;
 }
 @media (min-width: 639px) and (max-width: 2000px) {
   .header__btn {
