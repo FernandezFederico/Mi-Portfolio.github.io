@@ -3,6 +3,17 @@
   width: 100%;
   height: 100%;
 
+  body.light & {
+    background-color: map-get($map: $color, $key: "primario");
+    transition: all .5s ease;
+
+    .circulos__svg .path{
+      fill: map-get($map: $color, $key: "quinto");
+      transition: all .5s ease;
+    }
+
+  }
+
   position: fixed;
   top: 0;
   left: 0;

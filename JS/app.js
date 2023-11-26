@@ -29,3 +29,7 @@ import { hamburgerMenu } from "./hamburger_menu.js";
 document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".header__btn", ".header__panel", ".panel__link");
 });
+
+// dark mode
+import { toggleSwitch } from "./dark_mode.js";
+toggleSwitch();
