@@ -12,6 +12,11 @@
       display: none;
     }
 
+    @include landscape {
+      display: none;
+    }
+    
+
     .nav__list {
       width: 100%;
       min-height: 1rem;

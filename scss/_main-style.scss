@@ -32,7 +32,12 @@
             color: map-get($map: $color, $key: "primario");
           }
 
-          @include custom-media(0px, 768px) {
+
+          @include custom-media(0px, 480px) {
+            font-size: 3rem;
+          }
+
+          @include custom-media(481px, 768px) {
             font-size: 5rem;
           }
         }
@@ -47,8 +52,12 @@
             color: map-get($map: $color, $key: "primario");
           }
 
+          @include custom-media(0px, 480px) {
+            font-size: 2rem;
+          }
 
-          @include custom-media(0px, 768px) {
+
+          @include custom-media(481px, 768px) {
             font-size: 3rem;
           }
         }
