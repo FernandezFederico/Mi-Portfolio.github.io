@@ -1,194 +1,297 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fernandez Federico - Web Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
-  <script src="https://kit.fontawesome.com/e8a3730f29.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./scss/main.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;1,400&family=Philosopher:ital,wght@1,400;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="shortcut icon" href="#" type="image/x-icon" />
-</head>
-
-<body id="body">
-  <div class="cursor" id="cursor">
-    <div class="cursor__styles"></div>
-  </div>
-
-  <div class="circulos" id="circulos">
-    <svg class="circulos__svg svg1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path class="path"
-        d="M34.4,-45.1C44.8,-39.8,53.6,-30,57.3,-18.6C61,-7.2,59.7,5.9,56.9,19.7C54.1,33.6,49.9,48.3,40.2,60.6C30.5,73,15.3,82.9,0.6,82.2C-14.1,81.4,-28.3,69.9,-37.4,57.4C-46.6,44.8,-50.8,31.4,-59.2,16.6C-67.6,1.9,-80.2,-14.1,-79.3,-28.5C-78.4,-42.8,-63.9,-55.5,-48.5,-59.1C-33,-62.7,-16.5,-57.3,-2.3,-54.2C12,-51.1,24,-50.3,34.4,-45.1Z"
-        transform="translate(100 100)" />
-    </svg>
-    <svg class="circulos__svg svg2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path class="path"
-        d="M29.5,-45.1C40.8,-44.6,54.3,-41.9,63.4,-34C72.6,-26.1,77.3,-13,74.2,-1.8C71.1,9.4,60.1,18.9,52.5,29.4C44.8,39.9,40.6,51.4,32.4,58.7C24.2,65.9,12.1,68.9,-0.6,69.9C-13.2,70.8,-26.4,69.7,-40.4,65.8C-54.3,61.9,-68.9,55.1,-75,43.6C-81,32.2,-78.5,16.1,-77.8,0.4C-77.1,-15.2,-78.1,-30.4,-73.2,-44C-68.4,-57.5,-57.6,-69.4,-44.5,-68.9C-31.3,-68.3,-15.6,-55.4,-3.3,-49.8C9.1,-44.1,18.2,-45.7,29.5,-45.1Z"
-        transform="translate(100 100)" />
-    </svg>
-    <svg class="circulos__svg svg3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <path class="path"
-        d="M25.1,-37.9C37.3,-36.4,55.4,-39.4,63.5,-33.8C71.7,-28.3,70,-14.1,63.7,-3.6C57.4,6.9,46.6,13.8,43,27.3C39.5,40.8,43.2,61,37.2,65.5C31.3,70,15.6,58.8,3.1,53.5C-9.5,48.1,-19,48.7,-30,47.2C-41.1,45.6,-53.8,42,-62.9,33.8C-71.9,25.6,-77.4,12.8,-73.2,2.4C-69,-8,-55.3,-16,-47.1,-25.8C-39,-35.5,-36.4,-47.1,-29.5,-51.8C-22.6,-56.4,-11.3,-54.1,-2.4,-49.8C6.4,-45.6,12.8,-39.5,25.1,-37.9Z"
-        transform="translate(100 100)" />
-    </svg>
-  </div>
-
-  <header class="header" id="header">
-    <nav class="header__nav">
-      <ul class="nav__list">
-        <li class="nav__item link__custom">
-          <a href="#main__about" class="nav__link" title="About">Sobre mi</a>
-        </li>
-        <li class="nav__item link__custom">
-          <a href="#main__works" class="nav__link" title="Work">Trabajos</a>
-        </li>
-        <li class="nav__item link__custom">
-          <a href="#main__contact" class="nav__link" title="Contac">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="header__btn hamburger hamburger--vortex " type="button" aria-label="Menu" aria-controls="navigation">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-    <aside class="header__panel">
-      <ul class="panel__list">
-        <li class="panel__item"><a href="#main__about" class="panel__link">SOBRE MI</a></li>
-        <li class="panel__item"><a href="#main__works" class="panel__link">TRABAJOS</a></li>
-        <li class="panel__item"><a href="#main__contact" class="panel__link">CONTACTO</a></li>
-      </ul>
-    </aside>
-  </header>
-
-  <main class="main" id="main">
-    <div class="main__home" id="main__home">
-      <div class="main__hero">
-        <section class="hero__home">
-          <h2 class="hero__title">FERNANDEZ FEDERICO</h2>
-          <h3 class="hero__subtitle">WEB DEVELOPER</h3>
-        </section>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernandez Federico - Web Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e8a3730f29.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;1,400&family=Philosopher:ital,wght@1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  
+  <body id="body">
+    <div class="cursor" id="cursor">
+      <div class="cursor__styles"></div>
     </div>
 
-    <section class="main__about" id="main__about">
-      <div class="about__page">
-        <figure class="about__figure">
-          <img class="about__img" src="./img/9-si-foto-cv.png" alt="Imagen" loading="lazy" />
-        </figure>
+    <div class="circulos" id="circulos">
+      <svg
+        class="circulos__svg svg1"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="path"
+          d="M34.4,-45.1C44.8,-39.8,53.6,-30,57.3,-18.6C61,-7.2,59.7,5.9,56.9,19.7C54.1,33.6,49.9,48.3,40.2,60.6C30.5,73,15.3,82.9,0.6,82.2C-14.1,81.4,-28.3,69.9,-37.4,57.4C-46.6,44.8,-50.8,31.4,-59.2,16.6C-67.6,1.9,-80.2,-14.1,-79.3,-28.5C-78.4,-42.8,-63.9,-55.5,-48.5,-59.1C-33,-62.7,-16.5,-57.3,-2.3,-54.2C12,-51.1,24,-50.3,34.4,-45.1Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <svg
+        class="circulos__svg svg2"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="path"
+          d="M29.5,-45.1C40.8,-44.6,54.3,-41.9,63.4,-34C72.6,-26.1,77.3,-13,74.2,-1.8C71.1,9.4,60.1,18.9,52.5,29.4C44.8,39.9,40.6,51.4,32.4,58.7C24.2,65.9,12.1,68.9,-0.6,69.9C-13.2,70.8,-26.4,69.7,-40.4,65.8C-54.3,61.9,-68.9,55.1,-75,43.6C-81,32.2,-78.5,16.1,-77.8,0.4C-77.1,-15.2,-78.1,-30.4,-73.2,-44C-68.4,-57.5,-57.6,-69.4,-44.5,-68.9C-31.3,-68.3,-15.6,-55.4,-3.3,-49.8C9.1,-44.1,18.2,-45.7,29.5,-45.1Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <svg
+        class="circulos__svg svg3"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="path"
+          d="M25.1,-37.9C37.3,-36.4,55.4,-39.4,63.5,-33.8C71.7,-28.3,70,-14.1,63.7,-3.6C57.4,6.9,46.6,13.8,43,27.3C39.5,40.8,43.2,61,37.2,65.5C31.3,70,15.6,58.8,3.1,53.5C-9.5,48.1,-19,48.7,-30,47.2C-41.1,45.6,-53.8,42,-62.9,33.8C-71.9,25.6,-77.4,12.8,-73.2,2.4C-69,-8,-55.3,-16,-47.1,-25.8C-39,-35.5,-36.4,-47.1,-29.5,-51.8C-22.6,-56.4,-11.3,-54.1,-2.4,-49.8C6.4,-45.6,12.8,-39.5,25.1,-37.9Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </div>
+
+    <header class="header" id="header">
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item link__custom">
+            <a href="#main__about" class="nav__link" title="About">Sobre mi</a>
+          </li>
+          <li class="nav__item link__custom">
+            <a href="#main__works" class="nav__link" title="Work">Trabajos</a>
+          </li>
+          <li class="nav__item link__custom">
+            <a href="#main__contact" class="nav__link" title="Contact"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="header__btn hamburger hamburger--vortex"
+        type="button"
+        aria-label="Menu"
+        aria-controls="navigation"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <aside class="header__panel">
+        <ul class="panel__list">
+          <li class="panel__item">
+            <a href="#main__about" class="panel__link">SOBRE MI</a>
+          </li>
+          <li class="panel__item">
+            <a href="#main__works" class="panel__link">TRABAJOS</a>
+          </li>
+          <li class="panel__item">
+            <a href="#main__contact" class="panel__link">CONTACTO</a>
+          </li>
+        </ul>
+      </aside>
+    </header>
+
+    <main class="main" id="main">
+      <div class="main__home" id="main__home">
+        <div class="main__hero">
+          <section class="hero__home">
+            <h2 class="hero__title">FERNANDEZ FEDERICO</h2>
+            <h3 class="hero__subtitle">WEB DEVELOPER</h3>
+          </section>
+        </div>
       </div>
 
-      <section class="about__info">
-        <h2 class="about__title">SOBRE MI</h2>
-        <p class="about__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-          asperiores eaque dolore consequatur consequuntur dolorum rem
-          accusantium,
-        </p>
+      <section class="main__about" id="main__about">
+        <div class="about__page">
+          <figure class="about__figure">
+            <img
+              class="about__img"
+              src="./img/9-si-foto-cv.png"
+              alt="Imagen"
+              loading="lazy"
+            />
+          </figure>
+        </div>
 
-        <div class="about__buton">
-          <a href="./pages/about.html" class="about__link" title="sobre mi">Mas Información</a>
+        <section class="about__info">
+          <h2 class="about__title">SOBRE MI</h2>
+          <p class="about__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+            asperiores eaque dolore consequatur consequuntur dolorum rem
+            accusantium,
+          </p>
+          <div class="about__button">
+            <a href="./pages/about.html" class="about__link" title="sobre mi"
+              >Mas Información</a
+            >
+          </div>
+        </section>
+      </section>
+
+      <section class="main__works" id="main__works">
+        <div class="works__info">
+          <h2 class="works__tittle">TRABAJOS</h2>
+          <p class="works__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, nostrum.
+          </p>
+          <div class="works__button">
+            <a href="./pages/works.html" class="works__link">Conoce<br />mas</a>
+          </div>
+        </div>
+
+        <div class="works__cards">
+          <article class="card">
+            <a
+              class="card__link"
+              href="https://fernandezfederico.github.io/WOW-Team_Wipe_Guild.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <figure class="card__figure">
+                <img
+                  class="card__img"
+                  src="./img/TeamWipe.png"
+                  alt="imagen de pagina web de guild World of Warcraft"
+                  loading="lazy"
+                />
+              </figure>
+              <h4 class="card__title">Team Wipe Guild 1</h4>
+            </a>
+          </article>
+          <article class="card">
+            <a
+              class="card__link"
+              href="https://fernandezfederico.github.io/WOW-Team_Wipe_Guild.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <figure class="card__figure">
+                <img
+                  class="card__img"
+                  src="./img/TeamWipe.png"
+                  alt="imagen"
+                  loading="lazy"
+                />
+              </figure>
+              <h4 class="card__title">Team Wipe Guild 2</h4>
+            </a>
+          </article>
         </div>
       </section>
-    </section>
 
-    <section class="main__works" id="main__works">
-      <div class="works__info">
-        <h2 class="works__tittle">TRABAJOS</h2>
-        <p class="works__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Reprehenderit, nostrum.
-        </p>
-        <div class="works__buton">
-          <a href="./pages/works.html" class="works__link">Conece<br />mas</a>
+      <section class="main__contact" id="main__contact">
+        <div class="contact__text">
+          <span class="contact__subtitle">tienes algo en mente?</span>
+          <h2 class="contact__title">CONTÁCTAME</h2>
+          <div class="contact__button">
+            <a
+              href="./pages/contact.html"
+              class="contact__link"
+              title="link a formulario de contacto"
+              rel="noopener noreferrer"
+              >AQUÍ!</a
+            >
+          </div>
         </div>
+
+        <ul class="contact__socialmedia">
+          <li class="socialmedia__item">
+            <a
+              href="https://github.com/FernandezFederico"
+              class="socialmedia__link"
+              title="github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="socialmedia__svg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="socialmedia__item">
+            <a
+              href="https://www.linkedin.com/in/federico-fernandez-a3505a274/"
+              class="socialmedia__link"
+              title="Linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="socialmedia__svg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="socialmedia__item">
+            <a
+              href="mailto:fede-arq@hotmail.com"
+              class="socialmedia__link"
+              title="e-mail"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="socialmedia__svg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"
+                />
+                <path
+                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer__container">
+        <span class="footer__text">Fernandez Federico - Web Developer</span>
+        <button class="footer__switch" id="switch">
+          <span><i class="switch__span fa-regular fa-sun"></i></span>
+          <span><i class="switch__span fa-regular fa-moon"></i></span>
+        </button>
       </div>
+    </footer>
 
-      <div class="works__cards">
-        <article class="card">
-          <a href="#" class="card__link">
-            <figure class="card__figure">
-              <img class="card__img" src="./img/TeamWipe.png" alt="imagen de pagina web de guild World of Warcraft"
-                loading="lazy" />
-            </figure>
-            <h4 class="card__title">Team Wipe Guild 1</h4>
-          </a>
-        </article>
-        <article class="card">
-          <a href="#" class="card__link">
-            <figure class="card__figure">
-              <img class="card__img" src="./img/TeamWipe.png" alt="imagen" loading="lazy" />
-            </figure>
-            <h4 class="card__title">Team Wipe Guild 2</h4>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="main__contact" id="main__contact">
-      <div class="contact__text">
-        <span class="contact__subtitle">tienes algo en mente?</span>
-        <h2 class="contact__title">CONTACTAME</h2>
-        <div class="contact__buton">
-          <a href="./pages/contact.html" class="contact__link" title="link a formulario de contacto"
-            rel="noopener noreferrer">AQUI!</a>
-        </div>
-      </div>
-
-      <ul class="contact__socialmedia">
-        <li class="socialmedia__item">
-          <a href="https://github.com/FernandezFederico" class="socialmedia__link" title="github" target="_blank"
-            rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-          </a>
-        </li>
-        <li class="socialmedia__item">
-          <a href="https://www.linkedin.com/in/federico-fernandez-a3505a274/" class="socialmedia__link" title="linkedin"
-            target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
-              viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-            </svg>
-          </a>
-        </li>
-        <li class="socialmedia__item">
-          <a href="mailto:fede-arq@hotmail.com" class="socialmedia__link" title="e-mail" target="_blank"
-            rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
-              viewBox="0 0 16 16">
-              <path
-                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
-              <path
-                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="footer" id="footer">
-    <div class="footer__container">
-      <span class="footer__text">Fernandez Federico - Web Developer</span>
-      <button class="footer__switch" id="switch">
-        <span><i class="switch__span fa-regular fa-sun"></i></span>
-        <span><i class="switch__span fa-regular fa-moon"></i></span>
-      </button>
-    </div>
-  </footer>
-
-  <script src="./JS/app.js" type="module"></script>
-</body>
-
+    <script src="./JS/app.js" type="module"></script>
+  </body>
 </html>

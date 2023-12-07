@@ -1,10 +1,12 @@
 // cursor personalizado
 import { cursorInit } from "./cursor_custom.js";
 
-const isTouchDevice = () =>
-  "ontouchstart" in window ||
+const isTouchDevice = () => {
+   return"ontouchstart" in window ||
   navigator.maxTouchPoints > 0 ||
   navigator.msMaxTouchPoints > 0;
+};
+
 const isTouch = isTouchDevice();
 
 if (!isTouch) {
@@ -20,16 +22,19 @@ if (!isTouch) {
   node1.parentNode.removeChild(node1);
 }
 
-///ver que funcione en movil... no verifico que desaparezca el cursor
+///ver que funcione en móvil... no verifico que desaparezca el cursor
 // verificar si corre el else...
 
 // menu hamburguesa
 import { hamburgerMenu } from "./hamburger_menu.js";
+// dark mode
+import { toggleSwitch } from "./dark_mode.js";
+
 
 document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".header__btn", ".header__panel", ".panel__link");
+  toggleSwitch();
 });
 
-// dark mode
-import { toggleSwitch } from "./dark_mode.js";
-toggleSwitch();
+
+

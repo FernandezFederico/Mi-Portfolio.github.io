@@ -2,7 +2,7 @@ const cursorInit = (cursorElement) => {
   const isClickedClass = "isClicked";
   const isHidenClass = "isHiden";
 
-  //mueve el div cursor a la posicion del mouse
+  //mueve el div cursor a la posición del mouse
   const onMouseMove = (e) => {
     cursorElement.setAttribute(
       "style",
