@@ -15,7 +15,7 @@
 
   @include flexible(column, nowrap, center, center);
 
-  @include custom-media(639px, 2000px) {
+  @include custom-media(768px, 2000px) {
     display: none;
   }
   
