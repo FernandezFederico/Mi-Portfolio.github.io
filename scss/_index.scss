@@ -29,9 +29,8 @@
             color: map-get($map: $color, $key: "primario");
           }
 
-
           @include custom-media(0px, 480px) {
-            font-size: 3rem;
+            font-size: 3.3rem;
           }
 
           @include custom-media(481px, 768px) {
@@ -52,7 +51,6 @@
           @include custom-media(0px, 480px) {
             font-size: 2rem;
           }
-
 
           @include custom-media(481px, 768px) {
             font-size: 3rem;
@@ -206,9 +204,7 @@
 
       .skills__img {
         width: 100%;
-        max-width: 140px;
-
-        
+        max-width: 100px;        
       }
     }
 
@@ -238,7 +234,6 @@
         min-width: 20rem;
         @include flexible(column, nowrap, center, center);
 
-
         .about__img {
           width: 100%;
           max-width: 550px;
@@ -260,7 +255,6 @@
         body.light & {
           color: map-get($map: $color, $key: "primario");
         }
-
 
         @include custom-media(0px, 480px) {
           font-size: 3rem;
@@ -355,7 +349,6 @@
             border: 2px solid map-get($map: $color, $key: "primario");
           }
 
-
           @include flexible(column, nowrap, center, center);
 
           font-family: map-get($map: $fuente, $key: "secundario");
@@ -383,24 +376,19 @@
 
         .socialmedia__link {
           width: 100%;
-
+          min-height: 10rem;
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
 
-
-          min-height: 10rem;
-
           .socialmedia__svg {
             width: 100%;
-            height: 5rem;
+            height: 4rem;
             color: map-get($map: $color, $key: "quinto");
 
             body.light & {
               color: map-get($map: $color, $key: "primario");
             }
-
-
           }
         }
 

@@ -243,25 +243,22 @@ body::-webkit-scrollbar {
 }
 .header .header__nav .nav__list .nav__item {
   margin: 1rem;
+}
+.header .header__nav .nav__list .nav__item .nav__link {
   border: 1px solid #a6a6a6;
   padding: 1rem;
   border-radius: 30px;
+  color: #a6a6a6;
 }
-body.light .header .header__nav .nav__list .nav__item {
-  border: 2px solid #0d0d0d;
-}
-.header .header__nav .nav__list .nav__item:hover {
+.header .header__nav .nav__list .nav__item .nav__link:hover {
   background-color: #f7f4f4;
   transition: all 0.7s ease-in-out;
-}
-.header .header__nav .nav__list .nav__item:hover .nav__link {
   color: #0d0d0d;
-}
-.header .header__nav .nav__list .nav__item .nav__link {
-  color: #a6a6a6;
+  border: 2px solid #0d0d0d;
 }
 body.light .header .header__nav .nav__list .nav__item .nav__link {
   color: #0d0d0d;
+  border: 2px solid #0d0d0d;
 }
 
 .main {
@@ -303,7 +300,7 @@ body.light .main .main__home .main__hero .hero__home .hero__title {
 }
 @media (min-width: 0px) and (max-width: 480px) {
   .main .main__home .main__hero .hero__home .hero__title {
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -477,7 +474,7 @@ body.light .main .main__works .works__info .works__text {
 }
 .main .main__skills .skills__figure .skills__img {
   width: 100%;
-  max-width: 140px;
+  max-width: 100px;
 }
 .main .main__about {
   width: 90%;
@@ -655,7 +652,7 @@ body.light .main .main__contact .contact__socialmedia .socialmedia__item .social
 }
 .main .main__contact .contact__socialmedia .socialmedia__item .socialmedia__link .socialmedia__svg {
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   color: #a6a6a6;
 }
 body.light .main .main__contact .contact__socialmedia .socialmedia__item .socialmedia__link .socialmedia__svg {
