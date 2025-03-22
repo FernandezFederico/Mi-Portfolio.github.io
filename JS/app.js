@@ -2,9 +2,11 @@
 import { cursorInit } from "./cursor_custom.js";
 
 const isTouchDevice = () => {
-   return"ontouchstart" in window ||
-  navigator.maxTouchPoints > 0 ||
-  navigator.msMaxTouchPoints > 0;
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
 };
 
 const isTouch = isTouchDevice();
@@ -34,6 +36,3 @@ document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".header__btn", ".header__panel", ".panel__link");
   toggleSwitch();
 });
-
-
-

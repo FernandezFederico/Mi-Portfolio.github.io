@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Reseteamos los margin y paddings de todas las etiquetas */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -8,12 +10,17 @@
   vertical-align: baseline;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   display: block;
 }
 
 /* Evitamos problemas con las imagenes */
-img, picture, video, iframe, figure {
+img,
+picture,
+video,
+iframe,
+figure {
   max-width: 100%;
   width: 100%;
   display: flex;
@@ -47,7 +54,21 @@ html {
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
@@ -56,7 +77,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
 }
 
 /* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -67,7 +91,12 @@ blockquote:before, blockquote:after, q:before, q:after {
   color: var(--blanco);
 } */
 /* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
+form,
+input,
+textarea,
+select,
+button,
+label {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
@@ -75,11 +104,14 @@ form, input, textarea, select, button, label {
   background-color: transparent;
   color: inherit;
   display: block;
-  /* (Opcional) */ /* appearance: none; */
+  /* (Opcional) */
+  /* appearance: none; */
 }
 
 /* Reseteamos las tablas */
-table, tr, td {
+table,
+tr,
+td {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -108,12 +140,12 @@ body {
   overflow-x: hidden;
 }
 
-/*---------- Font.Famylys ----------*/
+/*---------- Font.Family ----------*/
 /* font-family: 'Alegreya', serif; */
 /* font-family: 'Philosopher', sans-serif; */
 /*---------- Colores ----------*/
 .circulos {
-  background-color: #404040;
+  background-color: #a70aa7;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -125,11 +157,11 @@ body {
   animation: svg 70s linear infinite alternate;
 }
 body.light .circulos {
-  background-color: #0d0d0d;
+  background-color: #a6a6a6;
   transition: all 0.5s ease;
 }
 body.light .circulos .circulos__svg .path {
-  fill: #a6a6a6;
+  fill: #a70aa7;
   transition: all 0.5s ease;
 }
 .circulos .circulos__svg {
@@ -251,7 +283,7 @@ body::-webkit-scrollbar {
   color: #a6a6a6;
 }
 .header .header__nav .nav__list .nav__item .nav__link:hover {
-  background-color: #f7f4f4;
+  background-color: #a70aa7;
   transition: all 0.7s ease-in-out;
   color: #0d0d0d;
   border: 2px solid #0d0d0d;
@@ -264,14 +296,14 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
 .main {
   position: relative;
   z-index: 2;
+  padding: 0 clamp(1rem, 5vw, 10rem);
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 .main .main__home {
   width: 100%;
-  min-height: 80vh;
   font-family: Alegreya;
 }
 .main .main__home .main__hero {
@@ -283,7 +315,6 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
   align-items: center;
 }
 .main .main__home .main__hero .hero__home {
-  width: 90%;
   min-height: 90vh;
   display: flex;
   flex-flow: column wrap;
@@ -292,48 +323,120 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
 }
 .main .main__home .main__hero .hero__home .hero__title {
   color: #f7f4f4;
-  font-size: 7rem;
+  font-size: clamp(2.5rem, 5vw, 6rem);
   text-align: center;
 }
 body.light .main .main__home .main__hero .hero__home .hero__title {
   color: #0d0d0d;
 }
-@media (min-width: 0px) and (max-width: 480px) {
-  .main .main__home .main__hero .hero__home .hero__title {
-    font-size: 3.3rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .main .main__home .main__hero .hero__home .hero__title {
-    font-size: 5rem;
-  }
-}
 .main .main__home .main__hero .hero__home .hero__subtitle {
   color: #f7f4f4;
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 body.light .main .main__home .main__hero .hero__home .hero__subtitle {
   color: #0d0d0d;
 }
-@media (min-width: 0px) and (max-width: 480px) {
-  .main .main__home .main__hero .hero__home .hero__subtitle {
-    font-size: 2rem;
+.main .main__about {
+  width: 80%;
+  min-height: 50vh;
+  margin-top: 4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main .main__about {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  .main .main__home .main__hero .hero__home .hero__subtitle {
-    font-size: 3rem;
+.main .main__about .about__figure {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__about .about__figure .about__img {
+  width: clamp(15rem, 30vw, 25rem);
+  border-radius: 2rem;
+}
+.main .main__about .about__info {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__about .about__info .about__title {
+  font-family: Alegreya;
+  color: #f7f4f4;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: start;
+}
+body.light .main .main__about .about__info .about__title {
+  color: #0d0d0d;
+}
+.main .main__about .about__info .about__text {
+  max-width: 40rem;
+  font-family: Alegreya;
+  color: #a6a6a6;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+body.light .main .main__about .about__info .about__text {
+  color: #0d0d0d;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main .main__about .about__info .about__text {
+    text-align: center;
   }
+}
+.main .main__skills {
+  width: 80%;
+  min-height: 40vh;
+  margin-top: 4rem;
+  font-family: Alegreya;
+}
+.main .main__skills .skills__title {
+  color: #f7f4f4;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+.main .main__skills .skills__figure {
+  width: 100%;
+  margin-top: 3rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 0px) and (max-width: 780px) {
+  .main .main__skills .skills__figure {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main .main__skills .skills__figure .skills__img {
+  width: clamp(4rem, 10vw, 100px);
 }
 .main .main__works {
-  width: 90%;
-  min-height: 90vh;
+  width: 80%;
+  height: 100%;
+  min-height: 50vh;
   margin-top: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-gap: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 0px) and (max-width: 1279px) {
   .main .main__works {
@@ -349,25 +452,26 @@ body.light .main .main__home .main__hero .hero__home .hero__subtitle {
 .main .main__works .works__info .works__tittle {
   font-family: Alegreya;
   color: #f7f4f4;
-  font-size: 6rem;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 body.light .main .main__works .works__info .works__tittle {
   color: #0d0d0d;
 }
 @media (min-width: 0px) and (max-width: 480px) {
   .main .main__works .works__info .works__tittle {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .main .main__works .works__info .works__tittle {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 .main .main__works .works__info .works__text {
   font-family: Alegreya;
   color: #a6a6a6;
   font-size: 1.5rem;
+  line-height: 1.5;
 }
 body.light .main .main__works .works__info .works__text {
   color: #0d0d0d;
@@ -379,8 +483,10 @@ body.light .main .main__works .works__info .works__text {
 }
 .main .main__works .works__cards {
   width: 100%;
+  height: auto;
+  min-height: 700px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
@@ -396,166 +502,79 @@ body.light .main .main__works .works__info .works__text {
 .main .main__works .works__cards .card {
   width: 100%;
   max-width: 400px;
-  position: relative;
+  min-height: 500px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+.main .main__works .works__cards .card:hover {
+  transform: translateY(-5px);
 }
 .main .main__works .works__cards .card .card__link {
   width: 100%;
+  text-decoration: none;
 }
 .main .main__works .works__cards .card .card__link .card__figure {
   width: 100%;
-  height: auto;
+  height: 220px;
+  overflow: hidden;
 }
 .main .main__works .works__cards .card .card__link .card__figure .card__img {
   width: 100%;
-  border-radius: 2rem;
-}
-.main .main__works .works__cards .card .card__link .card__title {
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
-  width: 100%;
   height: 100%;
-  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
+  transition: transform 0.3s ease;
+}
+.main .main__works .works__cards .card .card__link .card__content {
+  padding: 1.5rem;
+}
+.main .main__works .works__cards .card .card__link .card__content .card__title {
   font-family: Philosopher;
   color: #f7f4f4;
-  font-size: 2rem;
-  opacity: 0;
-  transform: translateZ(1) scale(0.1);
-  transition: all 0.75s ease;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
-.main .main__works .works__cards .card:hover .card__title {
-  opacity: 1;
-  transform: translateZ(1) scale(1);
-}
-.main .main__skills {
-  width: 90%;
-  min-height: 50vh;
-  margin-top: 4rem;
-  font-family: Alegreya;
-}
-.main .main__skills .skills__title {
-  color: #f7f4f4;
-  font-size: 6rem;
-  text-align: center;
-}
-@media (min-width: 0px) and (max-width: 480px) {
-  .main .main__skills .skills__title {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .main .main__skills .skills__title {
-    font-size: 4rem;
-  }
-}
-.main .main__skills .skills__figure {
-  width: 100%;
-  margin-top: 3rem;
-  gap: 1.5rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (min-width: 0px) and (max-width: 780px) {
-  .main .main__skills .skills__figure {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.main .main__skills .skills__figure .skills__img {
-  width: 100%;
-  max-width: 100px;
-}
-.main .main__about {
-  width: 90%;
-  min-height: 50vh;
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-@media (min-width: 0px) and (max-width: 1279px) {
-  .main .main__about {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr;
-  }
-}
-.main .main__about .about__page {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.main .main__about .about__page .about__figure {
-  width: 100%;
-  min-width: 20rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.main .main__about .about__page .about__figure .about__img {
-  width: 100%;
-  max-width: 550px;
-  border-radius: 2rem;
-}
-.main .main__about .about__info {
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-.main .main__about .about__info .about__title {
-  font-family: Alegreya;
-  color: #f7f4f4;
-  font-size: 6rem;
-  text-align: start;
-}
-body.light .main .main__about .about__info .about__title {
+body.light .main .main__works .works__cards .card .card__link .card__content .card__title {
   color: #0d0d0d;
 }
-@media (min-width: 0px) and (max-width: 480px) {
-  .main .main__about .about__info .about__title {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .main .main__about .about__info .about__title {
-    font-size: 4rem;
-  }
-}
-.main .main__about .about__info .about__text {
-  max-width: 40rem;
+.main .main__works .works__cards .card .card__link .card__content .card__description {
   font-family: Alegreya;
   color: #a6a6a6;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  min-height: 80px;
 }
-body.light .main .main__about .about__info .about__text {
+body.light .main .main__works .works__cards .card .card__link .card__content .card__description {
   color: #0d0d0d;
 }
-@media (min-width: 0px) and (max-width: 1279px) {
-  .main .main__about .about__info .about__text {
-    text-align: center;
-  }
+.main .main__works .works__cards .card .card__link .card__content .card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.main .main__works .works__cards .card .card__link .card__content .card__tags .card__tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f7f4f4;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-family: Alegreya;
+}
+body.light .main .main__works .works__cards .card .card__link .card__content .card__tags .card__tag {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #0d0d0d;
+}
+.main .main__works .works__cards .card:hover .card__img {
+  transform: scale(1.1);
 }
 .main .main__contact {
-  width: 90%;
-  min-height: 80vh;
+  width: 100%;
+  min-height: 50vh;
   margin-top: 4rem;
   gap: 1rem;
   display: flex;
@@ -571,33 +590,14 @@ body.light .main .main__about .about__info .about__text {
   justify-content: center;
   align-items: center;
 }
-.main .main__contact .contact__text .contact__subtitle {
-  font-family: Alegreya;
-  color: #f7f4f4;
-  font-size: 2rem;
-  text-align: center;
-}
-body.light .main .main__contact .contact__text .contact__subtitle {
-  color: #0d0d0d;
-}
 .main .main__contact .contact__text .contact__title {
   font-family: Alegreya;
   color: #f7f4f4;
-  font-size: 6rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
 body.light .main .main__contact .contact__text .contact__title {
   color: #0d0d0d;
-}
-@media (min-width: 0px) and (max-width: 480px) {
-  .main .main__contact .contact__text .contact__title {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .main .main__contact .contact__text .contact__title {
-    font-size: 4rem;
-  }
 }
 .main .main__contact .contact__text .contact__button {
   width: 100%;

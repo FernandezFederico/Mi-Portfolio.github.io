@@ -38,13 +38,12 @@ const cursorInit = (cursorElement) => {
   handleTextHover(cursorElement);
 };
 
-
 // aplica la class isLinckHoverClass al cursor al pasar el mouse por encima de un link
 const handleLinkHover = (cursorElement) => {
   const isLinckHoverClass = "isLinckHover";
   document
     .querySelectorAll(
-      'img, a, button, .link__custom, input[type="button"], input[type="submit"]'
+      'a, button, .link__custom, input[type="button"], input[type="submit"]'
     )
     .forEach((link) => {
       link.addEventListener("mouseover", () => {
@@ -58,7 +57,7 @@ const handleLinkHover = (cursorElement) => {
 
 const handleTextHover = (cursorElement) => {
   const isTextHoverClass = "isTextHover";
-  document.querySelectorAll("h1, h2, h3, h4, h5, h6, p").forEach((text) => {
+  document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, img").forEach((text) => {
     text.addEventListener("mouseover", () => {
       cursorElement.classList.add(isTextHoverClass);
     });
@@ -67,6 +66,5 @@ const handleTextHover = (cursorElement) => {
     });
   });
 };
-
 
 export { cursorInit, handleLinkHover };

@@ -56,7 +56,7 @@
         </li>
       </ul>
     </nav>
-    <button class="header__btn hamburger hamburger--vortex" type="button" aria-label="Menu" aria-controls="navigation">
+    <button class="header__btn hamburger hamburger--vortex" type="button" aria-label="Abrir menú">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
@@ -80,14 +80,65 @@
   </header>
 
   <main class="main" id="main">
-    <div class="main__home" id="main__home">
+    <section class="main__home" id="main__home">
       <div class="main__hero">
         <section class="hero__home">
           <h2 class="hero__title">FERNANDEZ FEDERICO</h2>
-          <h3 class="hero__subtitle">Front-End Developer</h3>
+          <h3 class="hero__subtitle">Desarrollador Frontend</h3>
         </section>
       </div>
-    </div>
+    </section>
+
+    <section class="main__about" id="main__about">
+
+      <figure class="about__figure">
+        <img class="about__img" src="./img/perfil.png" alt="Imagen" loading="lazy" />
+      </figure>
+
+
+      <div class="about__info">
+        <h2 class="about__title">SOBRE MI</h2>
+        <p class="about__text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+          asperiores eaque dolore consequatur consequuntur dolorum rem
+          accusantium,
+        </p>
+      </div>
+    </section>
+
+    <section class="main__skills" id="main__skills">
+      <h2 class="skills__title">HABILIDADES</h2>
+      <ul class="skills__figure">
+        <li>
+          <a href="https://developer.mozilla.org/es/docs/Web/HTML" title="HTML" target="_blank"><img
+              src="./img/html5.svg" alt="Icono de HTML" class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/es/docs/Web/CSS" title="CSS" target="_blank"><img src="./img/css3.svg"
+              alt="Icono de CSS" class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" title="JAVASCRIPT" target="_blank"><img
+              src="./img/javascript.svg" alt="Icono de JavaScript" class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://sass-lang.com/" title="SASS" target="_blank"><img src="./img/sass.svg" alt="Icono de SASS"
+              class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://getbootstrap.com/" title="Bootstrap" target="_blank"><img src="./img/bootstrap.svg"
+              alt="Icono de Bootstrap" class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://angular.dev/" title="Angular" target="_blank"><img src="./img/Angular.svg"
+              alt="Icono de Angular" class="skills__img"></a>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/ASP.NET_Core" title="ASP.NET Core" target="_blank"><img
+              src="./img/NET_Core.svg" alt="Icono de .NET Core" class="skills__img"></a>
+        </li>
+      </ul>
+    </section>
 
     <section class="main__works" id="main__works">
       <div class="works__info">
@@ -106,63 +157,51 @@
               <img class="card__img" src="./img/TeamWipe.png" alt="imagen de pagina web de guild World of Warcraft"
                 loading="lazy" />
             </figure>
-            <h4 class="card__title">Team Wipe Guild 1</h4>
+            <div class="card__content">
+              <h4 class="card__title">Team Wipe Guild</h4>
+              <p class="card__description">Sitio web para una guild de World of Warcraft. Desarrollado con HTML, CSS y
+                JavaScript.</p>
+              <div class="card__tags">
+                <span class="card__tag">HTML</span>
+                <span class="card__tag">CSS</span>
+                <span class="card__tag">JavaScript</span>
+              </div>
+            </div>
           </a>
         </article>
+
         <article class="card">
-          <a class="card__link" href="https://fernandezfederico.github.io/WOW-Team_Wipe_Guild.github.io/"
+          <a class="card__link" href="https://c79b5585.ecommerce-frontend-angular.pages.dev/dashboard/home"
             target="_blank" rel="noopener noreferrer">
             <figure class="card__figure">
-              <img class="card__img" src="./img/TeamWipe.png" alt="imagen" loading="lazy" />
+              <img class="card__img" src="./img/e-com.png" alt="imagen de portfolio personal" loading="lazy" />
             </figure>
-            <h4 class="card__title">Team Wipe Guild 2</h4>
+            <div class="card__content">
+              <h4 class="card__title">E-commerce</h4>
+              <p class="card__description">Aplicación completa de comercio electrónico, utilizando el stack MEAN.
+                Gestión de productos, usuarios y carritos de compras.</p>
+              <div class="card__tags">
+                <span class="card__tag">Angular</span>
+                <span class="card__tag">Node Js</span>
+                <span class="card__tag">MongoDb</span>
+              </div>
+            </div>
           </a>
         </article>
       </div>
-    </section>
-
-    <section class="main__skills" id="main__skills">
-      <h2 class="skills__title">HABILIDADES</h2>
-      <figure class="skills__figure">
-        <img src="./img/html5.svg" alt="Icono de " class="skills__img">
-        <img src="./img/css3.svg" alt="Icono de " class="skills__img">
-        <img src="./img/javascript.svg" alt="Icono de " class="skills__img">
-        <img src="./img/sass.svg" alt="Icono de " class="skills__img">
-        <img src="./img/bootstrap.svg" alt="Icono de " class="skills__img">
-        <img src="./img/git.svg" alt="Icono de " class="skills__img">
-      </figure>
-    </section>
-
-    <section class="main__about" id="main__about">
-      <div class="about__page">
-        <figure class="about__figure">
-          <img class="about__img" src="./img/9-si-foto-cv.png" alt="Imagen" loading="lazy" />
-        </figure>
-      </div>
-
-      <section class="about__info">
-        <h2 class="about__title">SOBRE MI</h2>
-        <p class="about__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-          asperiores eaque dolore consequatur consequuntur dolorum rem
-          accusantium,
-        </p>
-      </section>
     </section>
 
     <section class="main__contact" id="main__contact">
       <div class="contact__text">
-        <span class="contact__subtitle">tienes algo en mente?</span>
         <h2 class="contact__title">CONTÁCTAME</h2>
         <div class="contact__button">
-          <a href="./pages/contact.html" class="contact__link" title="link a formulario de contacto"
-            rel="noopener noreferrer">AQUÍ!</a>
+          <a href="#" class="contact__link" title="link a formulario de contacto" rel="noopener noreferrer">AQUÍ!</a>
         </div>
       </div>
 
       <ul class="contact__socialmedia">
         <li class="socialmedia__item">
-          <a href="https://github.com/FernandezFederico" class="socialmedia__link" title="github" target="_blank"
+          <a href="https://github.com/FernandezFederico" class="socialmedia__link" title="Github" target="_blank"
             rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
               viewBox="0 0 16 16">
@@ -182,15 +221,16 @@
           </a>
         </li>
         <li class="socialmedia__item">
-          <a href="#" class="socialmedia__link" title="currículum vitae"
-            target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg" viewBox="0 0 16 16">
-              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755"/>
+          <a href="#" class="socialmedia__link" title="Currículum Vitae" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
+              viewBox="0 0 16 16">
+              <path
+                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755" />
             </svg>
           </a>
         </li>
         <li class="socialmedia__item">
-          <a href="mailto:fede-arq@hotmail.com" class="socialmedia__link" title="e-mail" target="_blank"
+          <a href="mailto:fede-arq@hotmail.com" class="socialmedia__link" title="E-mail" target="_blank"
             rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socialmedia__svg"
               viewBox="0 0 16 16">

@@ -14,6 +14,7 @@
 
     border: 2px solid map-get($map: $color, $key: "quinto");
     border-radius: 50%;
+
     body.light & {
       border: 2px solid map-get($map: $color, $key: "primario");
     }
