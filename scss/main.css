@@ -145,7 +145,7 @@ body {
 /* font-family: 'Philosopher', sans-serif; */
 /*---------- Colores ----------*/
 .circulos {
-  background-color: #a70aa7;
+  background-color: #2e012e;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -157,11 +157,10 @@ body {
   animation: svg 70s linear infinite alternate;
 }
 body.light .circulos {
-  background-color: #a6a6a6;
   transition: all 0.5s ease;
 }
 body.light .circulos .circulos__svg .path {
-  fill: #a70aa7;
+  fill: #a6a6a6;
   transition: all 0.5s ease;
 }
 .circulos .circulos__svg {
@@ -283,7 +282,7 @@ body::-webkit-scrollbar {
   color: #a6a6a6;
 }
 .header .header__nav .nav__list .nav__item .nav__link:hover {
-  background-color: #a70aa7;
+  background-color: #2e012e;
   transition: all 0.7s ease-in-out;
   color: #0d0d0d;
   border: 2px solid #0d0d0d;
@@ -364,7 +363,7 @@ body.light .main .main__home .main__hero .hero__home .hero__subtitle {
 }
 .main .main__about .about__figure .about__img {
   width: clamp(15rem, 30vw, 25rem);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .main .main__about .about__info {
   width: 100%;
@@ -407,6 +406,9 @@ body.light .main .main__about .about__info .about__text {
   color: #f7f4f4;
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
+}
+body.light .main .main__skills .skills__title {
+  color: #0d0d0d;
 }
 .main .main__skills .skills__figure {
   width: 100%;
@@ -498,6 +500,78 @@ body.light .main .main__works .works__info .works__text {
     justify-content: center;
     align-items: center;
   }
+}
+.main .main__works .works__cards .card__new {
+  color: white;
+  background-image: url("../img/e-com.png");
+  background-size: cover;
+  padding: 10rem 0 0;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.main .main__works .works__cards .card__new:hover {
+  transform: scale(1.05);
+}
+.main .main__works .works__cards .card__new:hover .card__content2 {
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+.main .main__works .works__cards .card__new:hover .card__content2 > *:not(.card__title2) {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  transition-delay: 0.6s;
+}
+.main .main__works .works__cards .card__new:hover .card__content2 .card__title2::after {
+  transform: scaleX(1);
+}
+.main .main__works .works__cards .card__new .card__content2 {
+  padding: 1.5rem;
+  background: black;
+  opacity: 0.9;
+  font-family: Alegreya;
+  color: #a6a6a6;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 80px;
+  transform: translateY(65%);
+  transition: transform 0.3s ease;
+}
+.main .main__works .works__cards .card__new .card__content2 > *:not(.card__title2) {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.main .main__works .works__cards .card__new .card__content2 .card__title2 {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-family: Philosopher;
+  color: #f7f4f4;
+  font-size: 1.5rem;
+}
+.main .main__works .works__cards .card__new .card__content2 .card__title2::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 1.5rem);
+  height: 4px;
+  left: -1.5rem;
+  bottom: -5px;
+  background-color: #2e012e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.main .main__works .works__cards .card__new .card__content2 .card__button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #2e012e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 2rem;
 }
 .main .main__works .works__cards .card {
   width: 100%;

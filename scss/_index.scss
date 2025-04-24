@@ -62,7 +62,7 @@
 
       .about__img {
         width: clamp(15rem, 30vw, 25rem);
-        border-radius: 2rem;
+        border-radius: 1rem;
       }
     }
 
@@ -111,6 +111,10 @@
       color: map-get($map: $color, $key: "sexto");
       font-size: clamp(2rem, 5vw, 3rem);
       text-align: center;
+
+      body.light & {
+        color: map-get($map: $color, $key: "primario");
+      }
     }
 
     .skills__figure {
@@ -190,6 +194,97 @@
 
       @include custom-media(0px, 768px) {
         @include flexible(row, wrap, center, center);
+      }
+
+      .card__new {
+        color: white;
+        background-image: url("../img/e-com.png");
+        background-size: cover;
+        padding: 10rem 0 0;
+        max-width: 350px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+
+          .card__content2 {
+            transform: translateY(0);
+            transition-delay: 0.5s;
+
+            &>*:not(.card__title2) {
+              opacity: 1;
+              transition: opacity 0.3s linear;
+              transition-delay: 0.6s;
+            }
+
+            .card__title2::after {
+              transform: scaleX(1);
+
+            }
+          }
+        }
+
+        .card__content2 {
+          padding: 1.5rem;
+          background: black;
+          opacity: 0.9;
+
+          font-family: map-get($map: $fuente, $key: "secundario");
+          color: map-get($map: $color, $key: "quinto");
+          font-size: 1rem;
+          line-height: 1.5;
+          min-height: 80px;
+
+          transform: translateY(65%);
+          transition: transform 0.3s ease;
+
+          &>*:not(.card__title2) {
+            opacity: 0;
+            transition: opacity 0.3s linear;
+
+          }
+
+          .card__title2 {
+            position: relative;
+            width: max-content;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-family: map-get($map: $fuente, $key: "principal");
+            color: map-get($map: $color, $key: "sexto");
+            font-size: 1.5rem;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: calc(100% + 1.5rem);
+              height: 4px;
+              left: calc(1.5rem * -1);
+              bottom: -5px;
+              background-color: map-get($map: $color, $key: terciario);
+
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: transform 0.3s ease;
+
+            }
+          }
+
+          .card__button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: map-get($map: $color, $key: terciario);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            margin-top: 2rem;
+
+          }
+
+        }
+
       }
 
       .card {
@@ -378,4 +473,5 @@
       }
     }
   }
+
 }

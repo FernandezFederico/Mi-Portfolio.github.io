@@ -4,11 +4,11 @@
   height: 100%;
 
   body.light & {
-    background-color: map-get($map: $color, $key: "quinto");
+    background-color: map-get($map: $color, $key: "sextario");
     transition: all .5s ease;
 
     .circulos__svg .path {
-      fill: map-get($map: $color, $key: "terciario");
+      fill: map-get($map: $color, $key: "quinto");
       transition: all .5s ease;
     }
 
