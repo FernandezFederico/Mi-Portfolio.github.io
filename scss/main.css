@@ -519,18 +519,18 @@ body.light .main .main__works .works__info .works__text {
   transform: translateY(0);
   transition-delay: 0.5s;
 }
-.main .main__works .works__cards .card:hover .card__content > *:not(.card__title) {
+.main .main__works .works__cards .card:hover .card__content > *:not(.card__header) {
   opacity: 1;
   transition: opacity 0.3s linear;
   transition-delay: 0.6s;
 }
-.main .main__works .works__cards .card:hover .card__content .card__title::after {
+.main .main__works .works__cards .card:hover .card__content .card__header .card__title, .main .main__works .works__cards .card:hover .card__content .card__header .card__title::after {
   transform: scaleX(1);
 }
 .main .main__works .works__cards .card .card__content {
   padding: 1.5rem;
   background: black;
-  opacity: 0.9;
+  opacity: 0.95;
   font-family: Alegreya;
   color: #a6a6a6;
   font-size: 1rem;
@@ -539,11 +539,17 @@ body.light .main .main__works .works__info .works__text {
   transform: translateY(65%);
   transition: transform 0.3s ease;
 }
-.main .main__works .works__cards .card .card__content > *:not(.card__title) {
+.main .main__works .works__cards .card .card__content > *:not(.card__header) {
   opacity: 0;
   transition: opacity 0.3s linear;
 }
-.main .main__works .works__cards .card .card__content .card__title {
+.main .main__works .works__cards .card .card__content .card__header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main__works .works__cards .card .card__content .card__header .card__title {
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -553,7 +559,7 @@ body.light .main .main__works .works__info .works__text {
   color: #f7f4f4;
   font-size: 1.5rem;
 }
-.main .main__works .works__cards .card .card__content .card__title::after {
+.main .main__works .works__cards .card .card__content .card__header .card__title::after {
   content: "";
   position: absolute;
   width: calc(100% + 1.5rem);
@@ -564,6 +570,15 @@ body.light .main .main__works .works__info .works__text {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+}
+.main .main__works .works__cards .card .card__content .card__header .card__icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+.main .main__works .works__cards .card .card__content .card__header .card__icons img {
+  width: clamp(2rem, 5vw, 2.5rem);
 }
 .main .main__works .works__cards .card .card__content .card__button {
   display: inline-block;
