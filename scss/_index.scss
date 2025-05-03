@@ -150,7 +150,7 @@
     .works__info {
       @include flexible(column, wrap, flex-start, center);
 
-      .works__tittle {
+      .works__title {
         font-family: map-get($map: $fuente, $key: "secundario");
         color: map-get($map: $color, $key: "sexto");
         font-size: clamp(2rem, 5vw, 3rem);
@@ -198,7 +198,6 @@
 
       .card {
         color: white;
-        background-image: url("../img/e-com.png");
         background-size: cover;
         background-position: center;
         padding: 10rem 0 0;
@@ -245,8 +244,6 @@
 
           &>*:not(.card__header) {
             opacity: 0;
-            transition: opacity 0.3s linear;
-
           }
           .card__header {
             @include flexible(row, wrap, space-between, center);
@@ -279,7 +276,7 @@
             .card__icons {
               @include flexible(row, wrap, space-between, start);
               img {
-                width: clamp(2rem, 5vw, 2.5rem);
+                width: clamp(1.5rem, 5vw, 2rem);
               }
             }
             

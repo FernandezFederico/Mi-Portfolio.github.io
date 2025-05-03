@@ -451,21 +451,21 @@ body.light .main .main__skills .skills__title {
   justify-content: flex-start;
   align-items: center;
 }
-.main .main__works .works__info .works__tittle {
+.main .main__works .works__info .works__title {
   font-family: Alegreya;
   color: #f7f4f4;
   font-size: clamp(2rem, 5vw, 3rem);
 }
-body.light .main .main__works .works__info .works__tittle {
+body.light .main .main__works .works__info .works__title {
   color: #0d0d0d;
 }
 @media (min-width: 0px) and (max-width: 480px) {
-  .main .main__works .works__info .works__tittle {
+  .main .main__works .works__info .works__title {
     font-size: 2rem;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  .main .main__works .works__info .works__tittle {
+  .main .main__works .works__info .works__title {
     font-size: 2.5rem;
   }
 }
@@ -503,7 +503,6 @@ body.light .main .main__works .works__info .works__text {
 }
 .main .main__works .works__cards .card {
   color: white;
-  background-image: url("../img/e-com.png");
   background-size: cover;
   background-position: center;
   padding: 10rem 0 0;
@@ -541,7 +540,6 @@ body.light .main .main__works .works__info .works__text {
 }
 .main .main__works .works__cards .card .card__content > *:not(.card__header) {
   opacity: 0;
-  transition: opacity 0.3s linear;
 }
 .main .main__works .works__cards .card .card__content .card__header {
   display: flex;
@@ -578,7 +576,7 @@ body.light .main .main__works .works__info .works__text {
   align-items: start;
 }
 .main .main__works .works__cards .card .card__content .card__header .card__icons img {
-  width: clamp(2rem, 5vw, 2.5rem);
+  width: clamp(1.5rem, 5vw, 2rem);
 }
 .main .main__works .works__cards .card .card__content .card__button {
   display: inline-block;

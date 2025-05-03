@@ -1,5 +1,9 @@
 // cursor personalizado
 import { cursorInit } from "./cursor_custom.js";
+// menu hamburguesa
+import { hamburgerMenu } from "./hamburger_menu.js";
+// dark mode
+import { toggleSwitch } from "./dark_mode.js";
 
 const isTouchDevice = () => {
   return (
@@ -26,11 +30,6 @@ if (!isTouch) {
 
 ///ver que funcione en móvil... no verifico que desaparezca el cursor
 // verificar si corre el else...
-
-// menu hamburguesa
-import { hamburgerMenu } from "./hamburger_menu.js";
-// dark mode
-import { toggleSwitch } from "./dark_mode.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".header__btn", ".header__panel", ".panel__link");
