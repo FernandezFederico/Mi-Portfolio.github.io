@@ -146,8 +146,11 @@ body {
 /*---------- Colores ----------*/
 .circulos {
   background-color: #2e012e;
-  width: 100%;
-  height: 100%;
+  transform: scale(1.2);
+  left: -10%;
+  top: -10%;
+  width: 150%;
+  height: 150%;
   position: fixed;
   top: 0;
   left: 0;
@@ -295,7 +298,7 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
 .main {
   position: relative;
   z-index: 2;
-  padding: 0 clamp(1rem, 5vw, 10rem);
+  padding: 0 clamp(1rem, 20vw, 30rem);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -304,9 +307,13 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
 .main .main__home {
   width: 100%;
   font-family: Alegreya;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 .main .main__home .main__hero {
-  width: 100%;
+  width: 80%;
   min-height: 100vh;
   display: flex;
   flex-flow: column wrap;
@@ -321,7 +328,7 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
   align-items: center;
 }
 .main .main__home .main__hero .hero__home .hero__title {
-  color: #f7f4f4;
+  color: #a6a6a6;
   font-size: clamp(2.5rem, 5vw, 6rem);
   text-align: center;
 }
@@ -485,6 +492,7 @@ body.light .main .main__works .works__info .works__text {
 }
 .main .main__works .works__cards {
   width: 100%;
+  margin-top: 3;
   height: auto;
   min-height: 700px;
   display: flex;
@@ -523,7 +531,8 @@ body.light .main .main__works .works__info .works__text {
   transition: opacity 0.3s linear;
   transition-delay: 0.6s;
 }
-.main .main__works .works__cards .card:hover .card__content .card__header .card__title, .main .main__works .works__cards .card:hover .card__content .card__header .card__title::after {
+.main .main__works .works__cards .card:hover .card__content .card__header .card__title,
+.main .main__works .works__cards .card:hover .card__content .card__header .card__title::after {
   transform: scaleX(1);
 }
 .main .main__works .works__cards .card .card__content {

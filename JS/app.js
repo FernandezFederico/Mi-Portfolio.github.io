@@ -1,10 +1,10 @@
 // cursor personalizado
 import { cursorInit } from "./cursor_custom.js";
+
 // menu hamburguesa
 import { hamburgerMenu } from "./hamburger_menu.js";
 // dark mode
 import { toggleSwitch } from "./dark_mode.js";
-
 const isTouchDevice = () => {
   return (
     "ontouchstart" in window ||

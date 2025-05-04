@@ -1,7 +1,11 @@
 .circulos {
   background-color: map-get($map: $color, $key: "terciario");
-  width: 100%;
-  height: 100%;
+  transform: scale(1.2);
+  left: -10%;
+  top: -10%;
+  width: 150%;
+  height: 150%;
+  
 
   body.light & {
     background-color: map-get($map: $color, $key: "sextario");
