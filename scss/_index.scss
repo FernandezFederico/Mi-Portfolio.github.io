@@ -20,7 +20,7 @@
         @include flexible(column, wrap, center, center);
 
         .hero__title {
-          color: map-get($map: $color, $key: "quinto");
+          color: map-get($map: $color, $key: "sexto");
           font-size: clamp(2.5rem, 5vw, 6rem);
           text-align: center;
 
@@ -200,7 +200,7 @@
         color: white;
         background-size: cover;
         background-position: center;
-        padding: 10rem 0 0;
+        padding: 5rem 0 0;
         max-width: 350px;
         border-radius: 0.5rem;
         overflow: hidden;
@@ -233,7 +233,7 @@
         .card__content {
           padding: 1.5rem;
           background: black;
-          opacity: 0.95;
+          opacity: 0.90;
 
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");

@@ -328,7 +328,7 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
   align-items: center;
 }
 .main .main__home .main__hero .hero__home .hero__title {
-  color: #a6a6a6;
+  color: #f7f4f4;
   font-size: clamp(2.5rem, 5vw, 6rem);
   text-align: center;
 }
@@ -513,7 +513,7 @@ body.light .main .main__works .works__info .works__text {
   color: white;
   background-size: cover;
   background-position: center;
-  padding: 10rem 0 0;
+  padding: 5rem 0 0;
   max-width: 350px;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -538,7 +538,7 @@ body.light .main .main__works .works__info .works__text {
 .main .main__works .works__cards .card .card__content {
   padding: 1.5rem;
   background: black;
-  opacity: 0.95;
+  opacity: 0.9;
   font-family: Alegreya;
   color: #a6a6a6;
   font-size: 1rem;
