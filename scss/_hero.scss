@@ -6,14 +6,22 @@
 
   @include flexible(row, wrap, space-between, center);
 
+  @include custom-media(0px, 1279px) {
+    @include flexible(column, wrap, center, center);
+  }
+
   .hero__description {
     max-width: clamp(30rem, 50vw, 40rem);
 
     .hero__title {
       color: map-get($map: $color, $key: "sexto");
-      font-size: clamp(3rem, 4vw, 5rem);
+      font-size: clamp(2rem, 5vw, 3rem);
       line-height: 1;
       white-space: nowrap;
+
+      @include custom-media(0px, 1279px) {
+        white-space: normal;
+      }
 
       body.light & {
         color: map-get($map: $color, $key: "primario");
@@ -23,7 +31,7 @@
 
     .hero__text {
       color: map-get($map: $color, $key: "quinto");
-      font-size: clamp(1rem, 2vw, 2.5rem);
+      font-size: clamp(1.3rem, 2vw, 2.5rem);
       margin-top: 2rem;
 
       body.light & {
@@ -68,6 +76,12 @@
     border: 2px solid map-get($map: $color, $key: "terciario");
     overflow: hidden;
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    
+    @include custom-media(0px, 1279px) {
+        margin-top: 5rem;
+    
+    }
+
 
     .hero__img {
       width: 100%; 

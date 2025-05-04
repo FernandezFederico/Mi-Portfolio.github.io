@@ -309,6 +309,97 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
   border: 2px solid #121212;
 }
 
+.main__hero {
+  min-height: 90vh;
+  width: 80%;
+  font-family: Alegreya;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main__hero .hero__description {
+  max-width: clamp(30rem, 50vw, 40rem);
+}
+.main__hero .hero__description .hero__title {
+  color: #00FFFF;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero .hero__description .hero__title {
+    white-space: normal;
+  }
+}
+body.light .main__hero .hero__description .hero__title {
+  color: #121212;
+}
+.main__hero .hero__description .hero__text {
+  color: #F2F2F2;
+  font-size: clamp(1.3rem, 2vw, 2.5rem);
+  margin-top: 2rem;
+}
+body.light .main__hero .hero__description .hero__text {
+  color: #121212;
+}
+.main__hero .hero__description .hero__actions {
+  margin-top: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+}
+.main__hero .hero__description .hero__actions .hero__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #F2F2F2;
+  background-color: #7F00FF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.main__hero .hero__description .hero__media {
+  margin-top: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+}
+.main__hero .hero__description .hero__media .hero__svg {
+  fill: #F2F2F2;
+  height: 2rem;
+}
+.main__hero .hero__image {
+  width: clamp(15rem, 30vw, 25rem);
+  height: clamp(15rem, 30vw, 25rem);
+  border-radius: 50%;
+  border: 2px solid #7F00FF;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+          mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero .hero__image {
+    margin-top: 5rem;
+  }
+}
+.main__hero .hero__image .hero__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body {
   background-color: #121212;
 }
@@ -320,78 +411,6 @@ body .main {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-}
-body .main .main__hero {
-  min-height: 90vh;
-  width: 80%;
-  font-family: Alegreya;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-body .main .main__hero .hero__description {
-  max-width: clamp(30rem, 50vw, 40rem);
-}
-body .main .main__hero .hero__description .hero__title {
-  color: #00FFFF;
-  font-size: clamp(3rem, 4vw, 5rem);
-  line-height: 1;
-  white-space: nowrap;
-}
-body.light body .main .main__hero .hero__description .hero__title {
-  color: #121212;
-}
-body .main .main__hero .hero__description .hero__text {
-  color: #F2F2F2;
-  font-size: clamp(1rem, 2vw, 2.5rem);
-  margin-top: 2rem;
-}
-body.light body .main .main__hero .hero__description .hero__text {
-  color: #121212;
-}
-body .main .main__hero .hero__description .hero__actions {
-  margin-top: 2rem;
-  gap: 2rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
-  align-items: center;
-}
-body .main .main__hero .hero__description .hero__actions .hero__link {
-  display: inline-block;
-  text-decoration: none;
-  color: #F2F2F2;
-  background-color: #7F00FF;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-}
-body .main .main__hero .hero__description .hero__media {
-  margin-top: 2rem;
-  gap: 2rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
-  align-items: center;
-}
-body .main .main__hero .hero__description .hero__media .hero__svg {
-  fill: #F2F2F2;
-  height: 2rem;
-}
-body .main .main__hero .hero__image {
-  width: clamp(15rem, 30vw, 25rem);
-  height: clamp(15rem, 30vw, 25rem);
-  border-radius: 50%;
-  border: 2px solid #7F00FF;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-          mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-}
-body .main .main__hero .hero__image .hero__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 body .main .main__about {
   width: 80%;
