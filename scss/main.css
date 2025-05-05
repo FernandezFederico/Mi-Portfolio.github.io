@@ -379,6 +379,7 @@ body.light .main__hero .hero__description .hero__text {
   text-decoration: none;
   color: #F2F2F2;
   background-color: #7F00FF;
+  font-size: 24px;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
 }
@@ -425,7 +426,7 @@ body.light .main__hero .hero__description .hero__text {
 }
 
 body {
-  background-color: #121212;
+  background-color: #7F00FF;
 }
 body .main {
   position: relative;
