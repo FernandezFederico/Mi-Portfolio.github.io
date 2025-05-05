@@ -157,7 +157,8 @@ Primario	Púrpura fuerte	#7F00FF	Botones, enlaces, títulos destacados
 Secundario	Lila suave	#B388EB	Hover, detalles decorativos, tarjetas
 Fondo	Negro profundo	#121212	Fondo principal
 Texto principal	Blanco humo	#F2F2F2	Texto general sobre fondo oscuro
-Acento	Cian eléctrico	#00FFFF	Íconos, subrayado en enlaces, microdetalles */
+Acento	Cian eléctrico	#00FFFF	Íconos, subrayado en enlaces, microdetalles 
+*/
 .circulos {
   background-color: #7F00FF;
   transform: scale(1.2);
@@ -327,17 +328,18 @@ body.light .header .header__nav .nav__list .nav__item .nav__link {
   }
 }
 .main__hero .hero__description {
-  max-width: clamp(30rem, 50vw, 40rem);
+  max-width: clamp(30rem, 40vw, 50rem);
 }
 .main__hero .hero__description .hero__title {
-  color: #00FFFF;
-  font-size: clamp(2rem, 5vw, 3rem);
+  color: #B388EB;
+  font-size: clamp(2.5rem, 5vw, 3rem);
   line-height: 1;
   white-space: nowrap;
 }
 @media (min-width: 0px) and (max-width: 1279px) {
   .main__hero .hero__description .hero__title {
     white-space: normal;
+    text-align: center;
   }
 }
 body.light .main__hero .hero__description .hero__title {
@@ -347,6 +349,11 @@ body.light .main__hero .hero__description .hero__title {
   color: #F2F2F2;
   font-size: clamp(1.3rem, 2vw, 2.5rem);
   margin-top: 2rem;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero .hero__description .hero__text {
+    text-align: center;
+  }
 }
 body.light .main__hero .hero__description .hero__text {
   color: #121212;
@@ -358,6 +365,14 @@ body.light .main__hero .hero__description .hero__text {
   flex-flow: row wrap;
   justify-content: start;
   align-items: center;
+}
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero .hero__description .hero__actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .main__hero .hero__description .hero__actions .hero__link {
   display: inline-block;
@@ -375,6 +390,14 @@ body.light .main__hero .hero__description .hero__text {
   justify-content: start;
   align-items: center;
 }
+@media (min-width: 0px) and (max-width: 1279px) {
+  .main__hero .hero__description .hero__media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .main__hero .hero__description .hero__media .hero__svg {
   fill: #F2F2F2;
   height: 2rem;
@@ -383,7 +406,7 @@ body.light .main__hero .hero__description .hero__text {
   width: clamp(15rem, 30vw, 25rem);
   height: clamp(15rem, 30vw, 25rem);
   border-radius: 50%;
-  border: 2px solid #7F00FF;
+  border: 2px solid #B388EB;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
           mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
@@ -391,6 +414,7 @@ body.light .main__hero .hero__description .hero__text {
 @media (min-width: 0px) and (max-width: 1279px) {
   .main__hero .hero__image {
     margin-top: 5rem;
+    display: none;
   }
 }
 .main__hero .hero__image .hero__img {
