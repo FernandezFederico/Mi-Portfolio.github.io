@@ -1,5 +1,6 @@
 body {
   background-color: map-get($map: $color, $key: "terciario");
+  hyphens: none;
   .main {
     position: relative;
     z-index: 2;
