@@ -266,7 +266,7 @@ body::-webkit-scrollbar {
 .header {
   width: 100%;
   min-height: 5rem;
-  padding: 1rem 5rem;
+  padding: 0 clamp(0.5rem, 5vw, 10rem);
   position: absolute;
   z-index: 3;
   display: flex;
@@ -274,38 +274,60 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
-.header .header__nav {
+.header .header__container {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__container .header__logo {
+  font-family: Alegreya;
+  word-spacing: -0.5rem;
+  display: flex;
+  align-items: center;
+}
+body.light .header .header__container .header__logo {
+  color: #121212;
+}
+.header .header__container .header__logo .logo__part {
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  color: #00FFFF;
+}
+.header .header__container .header__logo .logo__dot {
+  font-size: clamp(2.8rem, 3.5vw, 4rem);
+  color: #B388EB;
+  line-height: 1;
+  transform: translateY(-0.4rem);
+}
+.header .header__container .header__nav {
   min-height: 1rem;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .header .header__nav {
+  .header .header__container .header__nav {
     display: none;
   }
 }
-.header .header__nav .nav__list {
+.header .header__container .header__nav .nav__list {
   width: 100%;
   min-height: 1rem;
+  font-size: clamp(1rem, 1vw, 2rem);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
-.header .header__nav .nav__list .nav__item {
+.header .header__container .header__nav .nav__list .nav__item {
   margin: 1rem;
 }
-.header .header__nav .nav__list .nav__item .nav__link {
-  border: 1px solid #F2F2F2;
-  padding: 1rem;
-  border-radius: 30px;
+.header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #F2F2F2;
 }
-.header .header__nav .nav__list .nav__item .nav__link:hover {
-  background-color: #7F00FF;
+.header .header__container .header__nav .nav__list .nav__item .nav__link:hover {
   transition: all 0.7s ease-in-out;
-  color: #121212;
-  border: 2px solid #121212;
+  color: #00FFFF;
 }
-body.light .header .header__nav .nav__list .nav__item .nav__link {
+body.light .header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #121212;
   border: 2px solid #121212;
 }
@@ -349,6 +371,9 @@ body.light .main__hero .hero__description .hero__title {
   color: #F2F2F2;
   font-size: clamp(1.3rem, 2vw, 2.5rem);
   margin-top: 2rem;
+}
+.main__hero .hero__description .hero__text span {
+  color: #00FFFF;
 }
 @media (min-width: 0px) and (max-width: 1279px) {
   .main__hero .hero__description .hero__text {

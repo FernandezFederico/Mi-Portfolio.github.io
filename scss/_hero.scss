@@ -34,6 +34,10 @@
       font-size: clamp(1.3rem, 2vw, 2.5rem);
       margin-top: 2rem;
 
+      span {
+        color: map-get($map: $color, $key: "sexto");
+      }
+
       @include custom-media(0px, 1279px) {
         text-align: center;
       }
