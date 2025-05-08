@@ -25,12 +25,12 @@
 
       .logo__part {
         font-size: clamp(1.8rem, 2.5vw, 3rem);
-        color: map-get($map: $color, $key:"sexto" );
+        color: map-get($map: $color, $key: "sexto");
       }
 
       .logo__dot {
         font-size: clamp(2.8rem, 3.5vw, 4rem);
-        color: map-get($map: $color, $key:"cuarto" );
+        color: map-get($map: $color, $key: "cuarto");
         line-height: 1;
         transform: translateY(-0.4rem);
       }
@@ -52,14 +52,15 @@
 
         .nav__item {
           margin: 1rem;
+          padding: 0.8rem;
+
+          &:hover {
+            transition: all .7s ease-in-out;
+            color: map-get($map: $color, $key: "sexto");
+          }
 
           .nav__link {
             color: map-get($map: $color, $key: "quinto");
-
-            &:hover {
-              transition: all .7s ease-in-out;
-              color: map-get($map: $color, $key: "sexto");
-            }
 
             body.light & {
               color: map-get($map: $color, $key: "primario");

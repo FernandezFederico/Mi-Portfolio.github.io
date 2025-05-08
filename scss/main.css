@@ -319,13 +319,14 @@ body.light .header .header__container .header__logo {
 }
 .header .header__container .header__nav .nav__list .nav__item {
   margin: 1rem;
+  padding: 0.8rem;
+}
+.header .header__container .header__nav .nav__list .nav__item:hover {
+  transition: all 0.7s ease-in-out;
+  color: #00FFFF;
 }
 .header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #F2F2F2;
-}
-.header .header__container .header__nav .nav__list .nav__item .nav__link:hover {
-  transition: all 0.7s ease-in-out;
-  color: #00FFFF;
 }
 body.light .header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #121212;
