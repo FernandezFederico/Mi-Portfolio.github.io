@@ -1,155 +1,155 @@
 body {
   background-color: map-get($map: $color, $key: "terciario");
   hyphens: none;
-  
+
   .main {
     position: relative;
     z-index: 2;
     padding: 0 clamp(0.5rem, 5vw, 10rem);
-  
+
     @include flexible(column, wrap, center, center);
-  
-  
+
+
     .main__about {
       width: 80%;
       min-height: 50vh;
       margin-top: 4rem;
-  
+
       @include flexible(row, nowrap, flex-start, center);
-  
+
       @include custom-media(0px, 1279px) {
         @include flexible(column, wrap, center, center);
       }
-  
+
       .about__figure {
         width: 100%;
         @include flexible(column, nowrap, center, center);
-  
+
         .about__img {
           width: clamp(15rem, 30vw, 25rem);
           border-radius: 1rem;
         }
       }
-  
+
       .about__info {
         width: 100%;
         @include flexible(column, wrap, center, center);
-  
+
         .about__title {
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "sexto");
           font-size: clamp(2rem, 5vw, 3rem);
           text-align: start;
-  
+
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
         }
-  
+
         .about__text {
           max-width: 40rem;
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");
           font-size: 1.5rem;
           line-height: 1.5;
-  
-  
+
+
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
-  
+
           @include custom-media(0px, 1279px) {
             text-align: center;
           }
-  
+
         }
       }
     }
-  
+
     .main__skills {
       width: 80%;
       min-height: 40vh;
       margin-top: 4rem;
       font-family: map-get($map: $fuente, $key: "secundario");
-  
+
       .skills__title {
         color: map-get($map: $color, $key: "sexto");
         font-size: clamp(2rem, 5vw, 3rem);
         text-align: center;
-  
+
         body.light & {
           color: map-get($map: $color, $key: "primario");
         }
       }
-  
+
       .skills__figure {
         width: 100%;
         margin-top: 3rem;
         gap: 1.5rem;
-  
+
         @include flexible(row, wrap, space-around, center);
-  
+
         @include custom-media(0px, 780px) {
           @include flexible(row, wrap, center, center);
         }
-  
+
         .skills__img {
           width: clamp(4rem, 10vw, 100px);
         }
       }
-  
+
     }
-  
+
     .main__works {
       width: 80%;
       height: 100%;
       min-height: 50vh;
       margin-top: 4rem;
-  
+
       @include flexible(column, wrap, center, center);
-  
+
       @include custom-media(0px, 1279px) {
         grid-template-columns: 1fr;
       }
-  
+
       .works__info {
         @include flexible(column, wrap, flex-start, center);
-  
+
         .works__title {
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "sexto");
           font-size: clamp(2rem, 5vw, 3rem);
-  
+
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
-  
+
           @include custom-media(0px, 480px) {
             font-size: 2rem;
           }
-  
+
           @include custom-media(481px, 768px) {
             font-size: 2.5rem;
           }
         }
-  
+
         .works__text {
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");
           font-size: 1.5rem;
           line-height: 1.5;
-  
+
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
-  
+
           @include custom-media(0px, 1279px) {
             text-align: center;
-  
+
           }
         }
       }
-  
+
       .works__cards {
         width: 100%;
         margin-top: 3;
@@ -157,11 +157,11 @@ body {
         min-height: 700px;
         @include flexible(row, wrap, center, flex-start);
         gap: 2rem;
-  
+
         @include custom-media(0px, 768px) {
           @include flexible(row, wrap, center, center);
         }
-  
+
         .card {
           color: white;
           background-size: cover;
@@ -170,24 +170,24 @@ body {
           max-width: 350px;
           border-radius: 0.5rem;
           overflow: hidden;
-  
+
           transition: transform 0.3s ease;
-  
+
           &:hover {
             transform: scale(1.05);
-  
+
             .card__content {
               transform: translateY(0);
               transition-delay: 0.5s;
-  
+
               &>*:not(.card__header) {
                 opacity: 1;
                 transition: opacity 0.3s linear;
                 transition-delay: 0.6s;
               }
-  
+
               .card__header {
-  
+
                 .card__title,
                 .card__title::after {
                   transform: scaleX(1);
@@ -195,28 +195,28 @@ body {
               }
             }
           }
-  
+
           .card__content {
             padding: 1.5rem;
             background: black;
             opacity: 0.90;
-  
+
             font-family: map-get($map: $fuente, $key: "secundario");
             color: map-get($map: $color, $key: "quinto");
             font-size: 1rem;
             line-height: 1.5;
             min-height: 80px;
-  
+
             transform: translateY(65%);
             transition: transform 0.3s ease;
-  
+
             &>*:not(.card__header) {
               opacity: 0;
             }
-  
+
             .card__header {
               @include flexible(row, wrap, space-between, center);
-  
+
               .card__title {
                 position: relative;
                 width: max-content;
@@ -225,7 +225,7 @@ body {
                 font-family: map-get($map: $fuente, $key: "principal");
                 color: map-get($map: $color, $key: "sexto");
                 font-size: 1.5rem;
-  
+
                 &::after {
                   content: "";
                   position: absolute;
@@ -234,24 +234,24 @@ body {
                   left: calc(1.5rem * -1);
                   bottom: -5px;
                   background-color: map-get($map: $color, $key: terciario);
-  
+
                   transform: scaleX(0);
                   transform-origin: left;
                   transition: transform 0.3s ease;
-  
+
                 }
               }
-  
+
               .card__icons {
                 @include flexible(row, wrap, space-between, start);
-  
+
                 img {
                   width: clamp(1.5rem, 5vw, 2rem);
                 }
               }
-  
+
             }
-  
+
             .card__button {
               display: inline-block;
               text-decoration: none;
@@ -260,50 +260,50 @@ body {
               padding: 0.5rem 1rem;
               border-radius: 0.25rem;
               margin-top: 2rem;
-  
+
             }
-  
+
           }
-  
+
         }
-  
-  
+
+
       }
-  
+
     }
-  
+
     .main__contact {
       width: 100%;
       min-height: 50vh;
       margin-top: 4rem;
       gap: 1rem;
-  
+
       @include flexible(column, nowrap, center, center);
-  
+
       .contact__text {
         width: 100%;
         min-height: 40vh;
-  
+
         @include flexible(column, nowrap, center, center);
-  
+
         .contact__title {
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "sexto");
           font-size: clamp(2rem, 5vw, 3rem);
           text-align: center;
-  
+
           body.light & {
             color: map-get($map: $color, $key: "primario");
           }
-  
+
         }
-  
+
         .contact__button {
           width: 100%;
           min-height: 20rem;
-  
+
           @include flexible(column, nowrap, center, center);
-  
+
           .contact__link {
             width: 100%;
             max-width: 8rem;
@@ -311,18 +311,18 @@ body {
             border-radius: 50%;
             border: 2px solid map-get($map: $color, $key: "quinto");
             text-align: center;
-  
+
             body.light & {
               color: map-get($map: $color, $key: "primario");
               border: 2px solid map-get($map: $color, $key: "primario");
             }
-  
+
             @include flexible(column, nowrap, center, center);
-  
+
             font-family: map-get($map: $fuente, $key: "secundario");
             color: map-get($map: $color, $key: "quinto");
             font-size: 1.2rem;
-  
+
             &:hover {
               background-color: map-get($map: $color, $key: "sexto");
               transition: all .7s ease-in-out;
@@ -331,36 +331,36 @@ body {
           }
         }
       }
-  
+
       .contact__socialmedia {
         width: 100%;
         min-height: 8rem;
         gap: 1rem;
-  
+
         @include flexible(row, nowrap, center, center);
-  
+
         .socialmedia__item {
           width: 100%;
-  
+
           .socialmedia__link {
             width: 100%;
             min-height: 10rem;
-  
+
             body.light & {
               color: map-get($map: $color, $key: "primario");
             }
-  
+
             .socialmedia__svg {
               width: 100%;
               height: 4rem;
               color: map-get($map: $color, $key: "quinto");
-  
+
               body.light & {
                 color: map-get($map: $color, $key: "primario");
               }
             }
           }
-  
+
           .socialmedia__link:hover .socialmedia__svg {
             transform: scale(1.3);
             transition: all 1s ease;
@@ -368,6 +368,10 @@ body {
         }
       }
     }
-  
+
   }
+}
+
+section {
+  scroll-margin-top: 80px;
 }
