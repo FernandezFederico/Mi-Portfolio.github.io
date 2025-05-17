@@ -38,29 +38,42 @@
 
     .header__nav {
       min-height: 1rem;
-
       @include custom-media(0px, 768px) {
         display: none;
       }
 
       .nav__list {
-        width: 100%;
-        min-height: 1rem;
-        font-size: clamp(1rem, 1vw, 2rem);
 
         @include flexible(row, nowrap, space-around, center);
 
         .nav__item {
           margin: 1rem;
           padding: 0.8rem;
+          font-size: clamp(1rem, 1.3vw, 2.5rem);
 
-          &:hover {
-            transition: all .7s ease-in-out;
-            color: map-get($map: $color, $key: "sexto");
+          &:hover{
+
+            .nav__link::after{
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+            
           }
-
           .nav__link {
             color: map-get($map: $color, $key: "quinto");
+            position: relative;
+
+            &::after{
+              content: "";
+              position: absolute;
+              background-color: blueviolet;
+              width: calc( 100% + 0.8rem);
+              height: 4px;
+
+              transition: transform 0.5s ease;
+              transform-origin: left;
+              transform: scaleX(0);
+            }
 
             body.light & {
               color: map-get($map: $color, $key: "primario");

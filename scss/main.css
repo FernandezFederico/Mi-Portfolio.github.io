@@ -309,9 +309,6 @@ body.light .header .header__container .header__logo {
   }
 }
 .header .header__container .header__nav .nav__list {
-  width: 100%;
-  min-height: 1rem;
-  font-size: clamp(1rem, 1vw, 2rem);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -320,13 +317,25 @@ body.light .header .header__container .header__logo {
 .header .header__container .header__nav .nav__list .nav__item {
   margin: 1rem;
   padding: 0.8rem;
+  font-size: clamp(1rem, 1.3vw, 2.5rem);
 }
-.header .header__container .header__nav .nav__list .nav__item:hover {
-  transition: all 0.7s ease-in-out;
-  color: #00FFFF;
+.header .header__container .header__nav .nav__list .nav__item:hover .nav__link::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #F2F2F2;
+  position: relative;
+}
+.header .header__container .header__nav .nav__list .nav__item .nav__link::after {
+  content: "";
+  position: absolute;
+  background-color: blueviolet;
+  width: calc(100% + 0.8rem);
+  height: 4px;
+  transition: transform 0.5s ease;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 body.light .header .header__container .header__nav .nav__list .nav__item .nav__link {
   color: #121212;
