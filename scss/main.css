@@ -330,7 +330,7 @@ body.light .header .header__container .header__logo {
 .header .header__container .header__nav .nav__list .nav__item .nav__link::after {
   content: "";
   position: absolute;
-  background-color: blueviolet;
+  background-color: #00FFFF;
   width: calc(100% + 0.8rem);
   height: 4px;
   transition: transform 0.5s ease;
