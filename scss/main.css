@@ -964,7 +964,7 @@ body.light .header__btn {
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translateY(-100%);
+  transform: translateX(-100%);
   transition: all 0.5s ease;
   font-family: Alegreya;
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -986,7 +986,7 @@ body.light .header__btn {
   background: rgba(0, 0, 0, 0.8823529412);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  width: 90vw;
+  width: 90svw;
   height: 80svh;
   border: 1px solid #7F00FF;
   border-radius: 12px;
