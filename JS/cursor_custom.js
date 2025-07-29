@@ -43,7 +43,7 @@ const handleLinkHover = (cursorElement) => {
   const isLinckHoverClass = "isLinckHover";
   document
     .querySelectorAll(
-      'a, button, .link__custom, input[type="button"], input[type="submit"]'
+      'a, button, .link__custom, input[type="button"], input[type="submit"], input[type="text"], input[type="email"], textarea'
     )
     .forEach((link) => {
       link.addEventListener("mouseover", () => {

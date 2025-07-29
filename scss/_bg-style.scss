@@ -24,7 +24,7 @@
   z-index: 1;
   overflow: hidden;
 
-  filter: blur(150px);
+  filter: blur(60px);
 
   animation: svg 70s linear infinite alternate;
 
@@ -38,7 +38,7 @@
       fill: map-get($map: $color, $key: "primario");
     }
 
-    animation: svg 20s linear infinite alternate;
+    animation: svg 50s linear infinite alternate;
   }
 
   .svg1 {
@@ -58,11 +58,11 @@
 
   @keyframes svg {
     from {
-      transform: rotate(0deg) scale(2);
+      transform: rotate(0deg) scale(1.5);
     }
 
     to {
-      transform: rotate(360deg) scale(3);
+      transform: rotate(360deg) scale(2);
     }
   }
 }
