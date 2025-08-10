@@ -775,7 +775,6 @@ section {
   background-color: rgba(38, 38, 38, 0.5803921569);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  border-radius: 1rem;
   padding: 2rem;
   width: 80%;
   margin-top: 4rem;
@@ -798,6 +797,7 @@ section {
 .main__contact .contact__info .contact__socialmedia .socialmedia__item {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 .main__contact .contact__info .contact__socialmedia .socialmedia__item .socialmedia__link {
   text-decoration: none;
@@ -808,10 +808,10 @@ section {
 }
 .main__contact .contact__info .contact__socialmedia .socialmedia__item .socialmedia__link .socialmedia__svg {
   color: #B388EB;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
-.main__contact .contact__info .contact__socialmedia .socialmedia__item .socialmedia__link span {
+.main__contact .contact__info .contact__socialmedia .socialmedia__item span {
   font-size: clamp(0.7rem, 1.5vw, 1.2rem);
   color: #F2F2F2;
 }

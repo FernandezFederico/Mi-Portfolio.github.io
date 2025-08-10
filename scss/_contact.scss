@@ -1,7 +1,6 @@
     .main__contact {
       background-color: #26262694;
       backdrop-filter: blur(4px);
-      border-radius: 1rem;
       padding: 2rem;
       width: 80%;
       margin-top: 4rem;
@@ -28,7 +27,7 @@
           .socialmedia__item {
             display: flex;
             align-items: center;
-
+            gap: 0.5rem;
 
             .socialmedia__link {
               text-decoration: none;
@@ -39,17 +38,17 @@
 
               .socialmedia__svg {
                 color: map-get($map: $color, $key: "cuarto");
-                width: 2rem;
-                height: 2rem;
+                width: 2.5rem;
+                height: 2.5rem;
               }
-              span {
-                font-size: clamp(0.7rem, 1.5vw, 1.2rem);
-                color: map-get($map: $color, $key: "quinto");
-              }
+            }
+
+            span {
+              font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+              color: map-get($map: $color, $key: "quinto");
             }
           }
         }
-
 
       }
 
@@ -83,6 +82,7 @@
           }
 
         }
+
         textarea {
           field-sizing: content;
           min-height: 4rem;
