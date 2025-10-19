@@ -89,7 +89,7 @@
     border-radius: 50%;
     border: 1px solid map-get($map: $color, $key: "cuarto");
     overflow: hidden;
-    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 
     @include custom-media(0px, 1279px) {
       margin-top: 5rem;

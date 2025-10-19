@@ -6,7 +6,6 @@
   width: 150%;
   height: 150%;
   
-
   body.light & {
     background-color: map-get($map: $color, $key: "sextario");
     transition: all .5s ease;
