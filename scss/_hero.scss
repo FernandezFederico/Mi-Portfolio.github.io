@@ -2,9 +2,7 @@
   min-height: 100vh;
   width: 80%;
   padding-top: 1rem;
-
-    font-family: unquote(map-get($fuente, "secundario"));
-
+  font-family: map-get($map: $fuente, $key: "secundario");
   @include flexible(row, wrap, space-between, center);
 
   @include custom-media(0px, 1279px) {
@@ -15,7 +13,9 @@
     max-width: clamp(30rem, 40vw, 50rem);
 
     .hero__title {
-      color: map-get($map: $color, $key: "cuarto");
+      color: map-get($map: $color, $key: "quinto");
+      font-family: map-get($map: $fuente, $key: "principal");
+      font-weight: 700;
       font-size: clamp(2.5rem, 5vw, 3rem);
       line-height: 1;
       white-space: nowrap;
@@ -35,8 +35,12 @@
       font-size: clamp(1.3rem, 2vw, 2.5rem);
       margin-top: 2rem;
 
-      span {
+      .hero__name {
         color: map-get($map: $color, $key: "acento");
+      }
+
+      .hero__skills {
+        color: map-get($map: $color, $key: "cuarto");
       }
 
       @include custom-media(0px, 1279px) {

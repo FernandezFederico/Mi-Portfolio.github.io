@@ -1,6 +1,5 @@
 body {
   background-color: map-get($map: $color, $key: "terciario");
-  // Subtle global radial overlay using accent color for depth
   $global-accent: map-get($map: $color, $key: "acento");
   background-image: radial-gradient(circle at 15% 10%, rgba($global-accent, 0.06), transparent 35%);
   background-repeat: no-repeat;
@@ -72,39 +71,6 @@ body {
       }
     }
 
-    .main__skills {
-      width: 80%;
-      min-height: 40vh;
-      margin-top: 4rem;
-      font-family: map-get($map: $fuente, $key: "secundario");
-
-      .skills__title {
-        color: map-get($map: $color, $key: "sexto");
-        font-size: clamp(2rem, 5vw, 3rem);
-        text-align: center;
-
-        body.light & {
-          color: map-get($map: $color, $key: "primario");
-        }
-      }
-
-      .skills__figure {
-        width: 100%;
-        margin-top: 3rem;
-        gap: 1.5rem;
-
-        @include flexible(row, wrap, space-around, center);
-
-        @include custom-media(0px, 780px) {
-          @include flexible(row, wrap, center, center);
-        }
-
-        .skills__img {
-          width: clamp(4rem, 10vw, 100px);
-        }
-      }
-
-    }
 
     .main__works {
       width: 80%;

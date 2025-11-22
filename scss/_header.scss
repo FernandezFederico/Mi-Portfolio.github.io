@@ -6,7 +6,7 @@
   z-index: 3;
   background: #26262600;
   backdrop-filter: blur(4px);
-  
+  font-family: map-get($map: $fuente, $key: "secundario");
   @include flexible(row, nowrap, center, center);
 
   .header__container {

@@ -10,14 +10,6 @@ $fuente: (
 
 /*---------- Colores ----------*/
 
-/* $color: (
-  "primario": #0d0d0d,
-  "secundario": #262626,
-  "terciario": #2e012e,
-  "cuarto": #800080,
-  "quinto": #a6a6a6,
-  "sexto": #f7f4f4,
-); */
 // Dark Mode (default)
 $color-dark: (
   "primario": #0A1629,    // Azul oscuro profundo (fondo principal) - Ajustado para mejor contraste
@@ -46,11 +38,3 @@ $color-light: (
 
 // Colores activos (por defecto dark mode)
 $color: $color-dark;
-
-/* 
-Primario	Púrpura fuerte	#7F00FF	Botones, enlaces, títulos destacados
-Secundario	Lila suave	#B388EB	Hover, detalles decorativos, tarjetas
-Fondo	Negro profundo	#121212	Fondo principal
-Texto principal	Blanco humo	#F2F2F2	Texto general sobre fondo oscuro
-Acento	Cian eléctrico	#00FFFF	Íconos, subrayado en enlaces, microdetalles 
-*/
