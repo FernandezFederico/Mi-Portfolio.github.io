@@ -1,5 +1,11 @@
 body {
   background-color: map-get($map: $color, $key: "terciario");
+  // Subtle global radial overlay using accent color for depth
+  $global-accent: map-get($map: $color, $key: "acento");
+  background-image: radial-gradient(circle at 15% 10%, rgba($global-accent, 0.06), transparent 35%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   hyphens: none;
 
   .main {
