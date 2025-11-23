@@ -22,7 +22,6 @@
         margin-top: 3rem;
         gap: 2rem;
         
-
         @include flexible(row, wrap, space-around, center);
 
         @include custom-media(0px, 780px) {
