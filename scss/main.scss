@@ -1,6 +1,6 @@
 @import "reset", "mixin", "variables";
 
-
+@import "body";
 @import "bg-style";
 @import "cursor-style";
 @import "scrollbar-style";
@@ -8,7 +8,7 @@
 @import "hero";
 @import "skills";
 @import "works";
-@import "index";
+@import "about";
 @import "contact";
 @import "footer";
 @import "hamburger-style";

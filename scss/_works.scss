@@ -1,8 +1,6 @@
     .main__works {
       width: 80%;
-      height: 100%;
       padding-top: 1rem;
-      min-height: 30vh;
       font-family: map-get($map: $fuente, $key: "secundario");
 
       @include flexible(column, wrap, center, center);
@@ -58,8 +56,6 @@
       .works__cards {
         width: 100%;
         margin-top: 3;
-        height: auto;
-        min-height: 700px;
         @include flexible(row, wrap, center, flex-start);
         gap: 2rem;
 

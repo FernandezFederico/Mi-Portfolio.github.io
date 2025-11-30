@@ -1,0 +1,57 @@
+    .main__about {
+      width: 80%;
+      min-height: 70vh;
+      margin-top: 4rem;
+      font-family: map-get($map: $fuente, $key: "secundario");
+
+      @include flexible(row, nowrap, flex-start, center);
+
+      @include custom-media(0px, 1279px) {
+        @include flexible(column, wrap, center, center);
+      }
+
+      .about__figure {
+        width: 100%;
+        @include flexible(column, nowrap, center, center);
+
+        .about__img {
+          width: clamp(10rem, 25vw, 20rem);
+          border-radius: 1rem;
+        }
+      }
+
+      .about__info {
+        width: 100%;
+        @include flexible(column, wrap, center, center);
+
+        .about__title {
+          font-family: map-get($map: $fuente, $key: "principal");
+          font-weight: 700;
+          color: map-get($map: $color, $key: "sexto");
+          font-size: clamp(2rem, 5vw, 3rem);
+          text-align: start;
+
+          body.light & {
+            color: map-get($map: $color, $key: "primario");
+          }
+        }
+
+        .about__text {
+          max-width: 40rem;
+          font-family: map-get($map: $fuente, $key: "secundario");
+          color: map-get($map: $color, $key: "quinto");
+          font-size: 1.5rem;
+          line-height: 1.5;
+
+
+          body.light & {
+            color: map-get($map: $color, $key: "primario");
+          }
+
+          @include custom-media(0px, 1279px) {
+            text-align: center;
+          }
+
+        }
+      }
+    }

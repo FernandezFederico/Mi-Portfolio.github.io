@@ -144,6 +144,28 @@ body {
 /* font-family: 'Alegreya', serif; */
 /* font-family: 'Philosopher', sans-serif; */
 /*---------- Colores ----------*/
+body {
+  background-color: #162744;
+  background-image: radial-gradient(circle at 15% 10%, rgba(244, 63, 94, 0.06), transparent 35%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-hyphens: none;
+          hyphens: none;
+}
+body .main {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(0.5rem, 5vw, 10rem);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+body section {
+  scroll-margin-top: 80px;
+}
+
 .circulos {
   background-color: #162744;
   transform: scale(1.2);
@@ -548,9 +570,7 @@ body.light .main__skills .skills__title {
 
 .main__works {
   width: 80%;
-  height: 100%;
   padding-top: 1rem;
-  min-height: 30vh;
   font-family: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
   display: flex;
   flex-flow: column wrap;
@@ -609,8 +629,6 @@ body.light .main__works .works__info .works__text {
 .main__works .works__cards {
   width: 100%;
   margin-top: 3;
-  height: auto;
-  min-height: 700px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -737,86 +755,66 @@ body.light .main__works .works__info .works__text {
   margin-top: 2rem;
 }
 
-body {
-  background-color: #162744;
-  background-image: radial-gradient(circle at 15% 10%, rgba(244, 63, 94, 0.06), transparent 35%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-hyphens: none;
-          hyphens: none;
-}
-body .main {
-  position: relative;
-  z-index: 2;
-  padding: 0 clamp(0.5rem, 5vw, 10rem);
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-body .main .main__about {
+.main__about {
   width: 80%;
-  min-height: 50vh;
+  min-height: 70vh;
   margin-top: 4rem;
+  font-family: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 }
 @media (min-width: 0px) and (max-width: 1279px) {
-  body .main .main__about {
+  .main__about {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
   }
 }
-body .main .main__about .about__figure {
+.main__about .about__figure {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-body .main .main__about .about__figure .about__img {
-  width: clamp(15rem, 30vw, 25rem);
+.main__about .about__figure .about__img {
+  width: clamp(10rem, 25vw, 20rem);
   border-radius: 1rem;
 }
-body .main .main__about .about__info {
+.main__about .about__info {
   width: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
-body .main .main__about .about__info .about__title {
-  font-family: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+.main__about .about__info .about__title {
+  font-family: '"Playfair Display", "Georgia", serif';
+  font-weight: 700;
   color: #F8FAFC;
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: start;
 }
-body.light body .main .main__about .about__info .about__title {
+body.light .main__about .about__info .about__title {
   color: #0A1629;
 }
-body .main .main__about .about__info .about__text {
+.main__about .about__info .about__text {
   max-width: 40rem;
   font-family: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
   color: #E2E8F0;
   font-size: 1.5rem;
   line-height: 1.5;
 }
-body.light body .main .main__about .about__info .about__text {
+body.light .main__about .about__info .about__text {
   color: #0A1629;
 }
 @media (min-width: 0px) and (max-width: 1279px) {
-  body .main .main__about .about__info .about__text {
+  .main__about .about__info .about__text {
     text-align: center;
   }
-}
-
-section {
-  scroll-margin-top: 80px;
 }
 
 .main__contact {
