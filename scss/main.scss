@@ -1,12 +1,14 @@
 @import "reset", "mixin", "variables";
 
-
+@import "body";
 @import "bg-style";
 @import "cursor-style";
 @import "scrollbar-style";
 @import "header";
 @import "hero";
-@import "index";
+@import "skills";
+@import "works";
+@import "about";
 @import "contact";
 @import "footer";
 @import "hamburger-style";
