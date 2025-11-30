@@ -1,19 +1,22 @@
     .main__contact {
-      background-color: #26262694;
+      background-color: map-get($map: $color, $key: "primario");
       backdrop-filter: blur(4px);
       padding: 2rem;
       width: 80%;
       margin-top: 4rem;
       gap: 1rem;
       display: grid;
-
+      border-radius: 0.5rem;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
       .contact__info {
 
         .contact__title {
           font-size: 2rem;
+          font-family: map-get($map: $fuente, $key: "principal");
           color: map-get($map: $color, $key: "sexto");
+          font-weight: 700;
+          font-size: clamp(2rem, 5vw, 3rem);
           margin-bottom: 1rem;
         }
 
@@ -37,9 +40,12 @@
               gap: 0.5rem;
 
               .socialmedia__svg {
-                color: map-get($map: $color, $key: "cuarto");
-                width: 2.5rem;
-                height: 2.5rem;
+                color: map-get($map: $color, $key: "quinto");
+                background-color: map-get($map: $color, $key: "terciario");
+                padding: 0.3rem;
+                border-radius: 0.5rem;
+                width: 3rem;
+                height: 3rem;
               }
             }
 
@@ -55,16 +61,17 @@
       .contact__form {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.5rem;
         align-items: start;
         justify-content: flex-start;
 
         input,
         textarea {
-          background-color: #dad2d218;
+          background-color: map-get($map: $color, $key: "terciario");
           width: 100%;
           resize: none;
           transition: border-bottom 0.2s;
+          border-radius: 1rem;
 
           padding: 0.5rem;
           margin-bottom: 1rem;
@@ -85,7 +92,8 @@
 
         textarea {
           field-sizing: content;
-          min-height: 4rem;
+          min-height: 5rem;
+          margin-bottom: 4rem;
         }
 
         button {
@@ -96,6 +104,7 @@
           border: none;
           font-size: 1rem;
           transition: background-color 0.3s ease;
+          border-radius: 1rem;
 
           &:hover {
             background-color: map-get($map: $color, $key: "cuarto");
