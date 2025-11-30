@@ -98,7 +98,7 @@
           }
 
           .card__content {
-            padding: 1.5rem;
+            padding: 1rem;
             background: black;
             opacity: 0.90;
 
@@ -125,7 +125,7 @@
                 line-height: 1.5;
                 font-family: map-get($map: $fuente, $key: "principal");
                 color: map-get($map: $color, $key: "sexto");
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
 
                 &::after {
                   content: "";
@@ -145,7 +145,7 @@
 
               .card__icons {
                 @include flexible(row, wrap, space-between, start);
-              
+
                 img {
                   width: clamp(1.5rem, 5vw, 2rem);
                   margin-bottom: 20px;

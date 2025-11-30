@@ -5,8 +5,8 @@
   right: 8vw;
   width: 3.5rem;
   height: 3.5rem;
-  border-radius: 50%;
-  background: #00FFFF80;
+  border-radius: 10%;
+  background: map-get($map: $color, $key: "acento-hover");
   backdrop-filter: blur(4px);
 
   @include flexible(column, nowrap, center, center);
