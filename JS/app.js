@@ -17,8 +17,7 @@ const isTouch = isTouchDevice();
 
 if (!isTouch) {
   const cursorElement = document.querySelector(".cursor");
-
-
+  const customCursorActiveClass = "customCursorActive";
 
   cursorInit(cursorElement);
 
