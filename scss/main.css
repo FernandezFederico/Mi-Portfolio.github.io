@@ -825,38 +825,42 @@ body.light .main__about .about__info .about__text {
   width: 80%;
   margin-top: 4rem;
   gap: 1rem;
-  display: grid;
   border-radius: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-.main__contact .contact__info .contact__title {
+.main__contact .contact__title {
   font-size: 2rem;
   font-family: '"Playfair Display", "Georgia", serif';
   color: #F8FAFC;
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
-.main__contact .contact__info .contact__socialmedia {
+.main__contact .contact__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.main__contact .contact__info .contact__media .contact__socialmedia {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: start;
   justify-content: flex-start;
+  margin-bottom: 1.5rem;
 }
-.main__contact .contact__info .contact__socialmedia .socialmedia__item {
+.main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.main__contact .contact__info .contact__socialmedia .socialmedia__item .socialmedia__link {
+.main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item .socialmedia__link {
   text-decoration: none;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.main__contact .contact__info .contact__socialmedia .socialmedia__item .socialmedia__link .socialmedia__svg {
+.main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item .socialmedia__link .socialmedia__svg {
   color: #E2E8F0;
   background-color: #162744;
   padding: 0.3rem;
@@ -864,19 +868,19 @@ body.light .main__about .about__info .about__text {
   width: 3rem;
   height: 3rem;
 }
-.main__contact .contact__info .contact__socialmedia .socialmedia__item span {
+.main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item span {
   font-size: clamp(0.7rem, 1.5vw, 1.2rem);
   color: #E2E8F0;
 }
-.main__contact .contact__form {
+.main__contact .contact__info .contact__form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: start;
   justify-content: flex-start;
 }
-.main__contact .contact__form input,
-.main__contact .contact__form textarea {
+.main__contact .contact__info .contact__form input,
+.main__contact .contact__info .contact__form textarea {
   background-color: #162744;
   width: 100%;
   resize: none;
@@ -888,24 +892,24 @@ body.light .main__about .about__info .about__text {
   color: #E2E8F0;
   font-size: 1rem;
 }
-.main__contact .contact__form input:focus,
-.main__contact .contact__form textarea:focus {
+.main__contact .contact__info .contact__form input:focus,
+.main__contact .contact__info .contact__form textarea:focus {
   outline: none;
   border-bottom: 2px solid #6EE7B7;
 }
-.main__contact .contact__form input::-moz-placeholder, .main__contact .contact__form textarea::-moz-placeholder {
+.main__contact .contact__info .contact__form input::-moz-placeholder, .main__contact .contact__info .contact__form textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.753);
 }
-.main__contact .contact__form input::placeholder,
-.main__contact .contact__form textarea::placeholder {
+.main__contact .contact__info .contact__form input::placeholder,
+.main__contact .contact__info .contact__form textarea::placeholder {
   color: rgba(255, 255, 255, 0.753);
 }
-.main__contact .contact__form textarea {
+.main__contact .contact__info .contact__form textarea {
   field-sizing: content;
   min-height: 5rem;
   margin-bottom: 4rem;
 }
-.main__contact .contact__form button {
+.main__contact .contact__info .contact__form button {
   width: 100%;
   background-color: #162744;
   color: #E2E8F0;
@@ -915,7 +919,7 @@ body.light .main__about .about__info .about__text {
   transition: background-color 0.3s ease;
   border-radius: 1rem;
 }
-.main__contact .contact__form button:hover {
+.main__contact .contact__info .contact__form button:hover {
   background-color: #6EE7B7;
 }
 
