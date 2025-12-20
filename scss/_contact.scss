@@ -1,11 +1,11 @@
     .main__contact {
+      width: 80%;
+      padding: 2rem;
       background-color: map-get($map: $color, $key: "primario");
       backdrop-filter: blur(4px);
-      padding: 2rem;
-      width: 80%;
-      margin-top: 4rem;
       gap: 1rem;
       border-radius: 0.5rem;
+      box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
 
       .contact__title {
         font-size: 2rem;
@@ -54,7 +54,7 @@
               }
 
               span {
-                font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+                font-size: clamp(0.7rem, 3vw, 1.2rem);
                 color: map-get($map: $color, $key: "quinto");
               }
             }

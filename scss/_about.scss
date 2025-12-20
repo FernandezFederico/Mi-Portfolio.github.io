@@ -1,7 +1,8 @@
     .main__about {
       width: 80%;
-      min-height: 70vh;
-      margin-top: 4rem;
+      min-height: 60vh;
+      margin-top: 1rem;
+      margin-bottom: 100px;
       font-family: map-get($map: $fuente, $key: "secundario");
 
       @include flexible(row, nowrap, flex-start, center);
@@ -13,9 +14,10 @@
       .about__figure {
         width: 100%;
         @include flexible(column, nowrap, center, center);
-
+        height: 100%;
+        
         .about__img {
-          width: clamp(10rem, 25vw, 20rem);
+          width: clamp(15rem, 25vw, 25rem);
           border-radius: 1rem;
         }
       }
@@ -31,6 +33,7 @@
           font-size: clamp(2rem, 5vw, 3rem);
           text-align: start;
           margin-top: 1rem;
+          margin-bottom: 1rem;
 
           body.light & {
             color: map-get($map: $color, $key: "primario");
@@ -38,7 +41,7 @@
         }
 
         .about__text {
-          max-width: 40rem;
+          max-width: 45rem;
           font-family: map-get($map: $fuente, $key: "secundario");
           color: map-get($map: $color, $key: "quinto");
           font-size: 1.5rem;

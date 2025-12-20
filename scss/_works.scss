@@ -1,6 +1,8 @@
     .main__works {
       width: 80%;
       padding-top: 1rem;
+      min-height: 60vh;
+      margin-bottom: 100px;
       font-family: map-get($map: $fuente, $key: "secundario");
 
       @include flexible(column, wrap, center, center);
