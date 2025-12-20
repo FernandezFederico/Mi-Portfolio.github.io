@@ -32,7 +32,7 @@
   transition: all 0.5s ease;
 
   font-family: map-get($map: $fuente, $key: "secundario");
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.6rem, 5vw, 3rem);
   color: map-get($map: $color, $key: "quinto");
 
   @include flexible(column, nowrap, center, center);

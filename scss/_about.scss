@@ -30,6 +30,7 @@
           color: map-get($map: $color, $key: "sexto");
           font-size: clamp(2rem, 5vw, 3rem);
           text-align: start;
+          margin-top: 1rem;
 
           body.light & {
             color: map-get($map: $color, $key: "primario");
