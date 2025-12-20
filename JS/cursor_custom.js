@@ -2,12 +2,15 @@ const cursorInit = (cursorElement) => {
   const isClickedClass = "isClicked";
   const isHidenClass = "isHiden";
 
-  //mueve el div cursor a la posición del mouse
+  if (!cursorElement) return;
+
+  // mueve el div cursor a la posición del mouse centrando según sus dimensiones
   const onMouseMove = (e) => {
-    cursorElement.setAttribute(
-      "style",
-      "top: " + (e.pageY - 37.5) + "px; left: " + (e.pageX - 37.5) + "px;"
-    );
+    const rect = cursorElement.getBoundingClientRect();
+    const offsetX = rect.width / 2;
+    const offsetY = rect.height / 2;
+    cursorElement.style.top = (e.pageY - offsetY) + "px";
+    cursorElement.style.left = (e.pageX - offsetX) + "px";
   };
   // agrega y quita la class isClickedClass al cursor
   const onMouseDown = () => {

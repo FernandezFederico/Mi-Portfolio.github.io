@@ -1,0 +1,23 @@
+body {
+  background-color: map-get($map: $color, $key: "terciario");
+  $global-accent: map-get($map: $color, $key: "acento");
+  background-image: radial-gradient(circle at 15% 10%, rgba($global-accent, 0.06), transparent 35%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  hyphens: none;
+
+  .main {
+    position: relative;
+    z-index: 2;
+    padding: 0 clamp(0.5rem, 5vw, 10rem);
+
+    @include flexible(column, wrap, center, center);
+
+
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+}

@@ -45,7 +45,7 @@
         <a href="#main__hero">
           <span class="logo__part">Fe</span>
           <span class="logo__dot">.</span>
-          <span class="logo__part">dev</span>
+          <span class="logo__part-two">dev</span>
         </a>
       </section>
       <nav class="header__nav">
@@ -97,10 +97,10 @@
   <main class="main" id="main">
     <section class="main__hero" id="main__hero">
       <section class="hero__description">
-        <h2 class="hero__title">Desarrollador Frontend</h2>
+        <h1 class="hero__title">Desarrollador Frontend</h1>
         <p class="hero__text">
-          Me llamo <span>Federico Fernández</span>, soy desarrollador web Fullstack con experiencia en Angular, .NET y
-          C#.
+          Me llamo <span class="hero__name">Federico Fernández</span>, soy desarrollador web  con experiencia en <span class="hero__skills">Angular</span>, <span class="hero__skills">HTML</span>,
+          <span class="hero__skills">CSS</span> y <span class="hero__skills">JavaScript</span>.
         </p>
         <div class="hero__actions">
           <a href="#main__works" class="hero__link">
@@ -148,21 +148,22 @@
           <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" title="JAVASCRIPT" target="_blank"><img
               src="./img/javascript.svg" alt="Icono de JavaScript" class="skills__img"></a>
         </li>
+
         <li>
           <a href="https://sass-lang.com/" title="SASS" target="_blank"><img src="./img/sass.svg" alt="Icono de SASS"
               class="skills__img"></a>
         </li>
         <li>
-          <a href="https://getbootstrap.com/" title="Bootstrap" target="_blank"><img src="./img/bootstrap.svg"
-              alt="Icono de Bootstrap" class="skills__img"></a>
+            <a href="https://angular.dev/" title="ANGULAR" target="_blank"><img src="./img/Angular.svg"
+                alt="Icono de Angular" class="skills__img"></a>
         </li>
         <li>
-          <a href="https://angular.dev/" title="Angular" target="_blank"><img src="./img/Angular.svg"
-              alt="Icono de Angular" class="skills__img"></a>
+          <a href="https://www.java.com/es/" title="JAVA" target="_blank"><img src="./img/java.png" alt="Icono de Java" class="skills__img"></a>
         </li>
+
       </ul>
     </section>
-
+    
     <section class="main__works" id="main__works">
       <div class="works__info">
         <h2 class="works__title">TRABAJOS</h2>
@@ -214,6 +215,8 @@
             <p class="card__body">
               Aplicación completa de comercio electrónico, utilizando el stack MEAN.
               Gestión de productos, usuarios y carritos de compras.
+              Aplicación completa de comercio electrónico, utilizando el stack MEAN.
+              Gestión de productos, usuarios y carritos de compras.
             </p>
             <a href="https://github.com/FernandezFederico/ecommerce-frontend_angular" class="card__button"
               target="_blank" rel="noopener noreferrer">
@@ -237,16 +240,21 @@
       <div class="about__info">
         <h2 class="about__title">SOBRE MI</h2>
         <p class="about__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-          asperiores eaque dolore consequatur consequuntur dolorum rem
-          accusantium,
+          Soy un desarrollador en formación con experiencia práctica en JavaScript, Angular y Node.js.
+        </p>
+        <p class="about__text">
+          Actualmente curso el FP DAM, consolidando fundamentos de programación, bases de datos y arquitectura de software.
+        </p>
+        <p class="about__text">
+          Mi objetivo es integrarme al sector y aportar valor desde el inicio y seguir creciendo dentro de un entorno profesional.
         </p>
       </div>
     </section>
 
     <section class="main__contact" id="main__contact">
+      <h2 class="contact__title">CONTACTO</h2>
       <div class="contact__info">
-        <h2 class="contact__title">CONTACTO</h2>
+        <div class="contact__media">
         <ul class="contact__socialmedia">
           <li class="socialmedia__item">
             <a href="https://github.com/FernandezFederico" class="socialmedia__link" title="Github" target="_blank"
@@ -294,13 +302,14 @@
             <span>federico.fernandez.dev@gmail.com</span>
           </li>
         </ul>
-      </div>
-      <form class="contact__form" action="https://formspree.io/f/movkbero" method="POST">
+        </div>
+        <form class="contact__form" action="https://formspree.io/f/movkbero" method="POST">
         <input type="text" name="name" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu email" required>
         <textarea name="message" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
-      </form>
+        </form>
+      </div>
     </section>
   </main>
 

@@ -4,33 +4,37 @@
 /* font-family: 'Philosopher', sans-serif; */
 
 $fuente: (
-  "principal": Philosopher,
-  "secundario": Alegreya,
+  "principal": '"Playfair Display", "Georgia", serif',
+  "secundario": '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 );
 
 /*---------- Colores ----------*/
 
-/* $color: (
-  "primario": #0d0d0d,
-  "secundario": #262626,
-  "terciario": #2e012e,
-  "cuarto": #800080,
-  "quinto": #a6a6a6,
-  "sexto": #f7f4f4,
-); */
-$color: (
-  "primario": #121212,
-  "secundario": #3d3d3d,
-  "terciario": #7F00FF,
-  "cuarto": #B388EB,
-  "quinto": #F2F2F2	,
-  "sexto": #00FFFF,
+// Dark Mode (default)
+$color-dark: (
+  "primario": #0A1629,    // Azul oscuro profundo (fondo principal) - Ajustado para mejor contraste
+  "secundario": #0F1E3A,  // Azul oscuro secundario - Ajustado
+  "terciario": #162744,   // Azul medio - Mejorado contraste con elementos superiores
+  "cuarto": #6EE7B7,     // Verde agua más visible - Mejorado contraste
+  "quinto": #E2E8F0,    // Gris claro (texto principal) - Mantiene buen contraste
+  "sexto": #F8FAFC,     // Casi blanco (títulos) - Reducido para menor fatiga visual
+  "acento": #F43F5E,    // Rosa brillante - Ajustado para mejor contraste
+  "acento-hover": #FB7185, // Estado hover más visible
+  "acento-disabled": #831843  // Estado deshabilitado con contraste adecuado
 );
 
-/* 
-Primario	Púrpura fuerte	#7F00FF	Botones, enlaces, títulos destacados
-Secundario	Lila suave	#B388EB	Hover, detalles decorativos, tarjetas
-Fondo	Negro profundo	#121212	Fondo principal
-Texto principal	Blanco humo	#F2F2F2	Texto general sobre fondo oscuro
-Acento	Cian eléctrico	#00FFFF	Íconos, subrayado en enlaces, microdetalles 
-*/
+// Light Mode
+$color-light: (
+  "primario": #EEF2F6,    // Fondo principal: gris azulado muy suave
+  "secundario": #E5EAF0,  // Fondo secundario: gris azulado claro
+  "terciario": #D8E0EA,   // Elementos de fondo: gris azulado medio
+  "cuarto": #0B6E78,      // Acento secundario: verde azulado oscuro
+  "quinto": #1A2234,      // Texto principal: azul muy oscuro
+  "sexto": #0F172A,       // Títulos: azul oscuro profundo
+  "acento": #BE2040,      // Color importante: rojo más oscuro
+  "acento-hover": #9C1A3D, // Hover del acento
+  "acento-disabled": #94A3B8 // Estado deshabilitado
+);
+
+// Colores activos (por defecto dark mode)
+$color: $color-dark;
