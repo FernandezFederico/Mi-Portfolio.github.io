@@ -60,6 +60,7 @@
         margin-top: 3;
         @include flexible(row, wrap, center, flex-start);
         gap: 2rem;
+          
 
         @include custom-media(0px, 768px) {
           @include flexible(row, wrap, center, center);
@@ -73,7 +74,7 @@
           max-width: 350px;
           border-radius: 0.5rem;
           overflow: hidden;
-          box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
           transition: transform 0.3s ease;
 

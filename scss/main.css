@@ -679,7 +679,7 @@ body.light .main__works .works__info .works__text {
   max-width: 350px;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
 .main__works .works__cards .card:hover {
@@ -859,6 +859,10 @@ body.light .main__about .about__info .about__text {
   margin-top: 4rem;
   gap: 1rem;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+body.light .main__contact {
+  background-color: #87a3c6;
 }
 .main__contact .contact__title {
   font-size: 2rem;
@@ -870,7 +874,7 @@ body.light .main__about .about__info .about__text {
   text-align: center;
 }
 body.light .main__contact .contact__title {
-  color: #0b3173;
+  color: #0B6E78;
 }
 .main__contact .contact__info {
   display: grid;
