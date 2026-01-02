@@ -62,7 +62,7 @@
 
             }
           }
-
+          
           span {
             font-size: clamp(0.8rem, 1.8vw, 1.2rem);
             color: map-get($map: $color, $key: "quinto");
@@ -141,7 +141,8 @@
 
     &:hover {
       background-color: map-get($map: $color, $key: "cuarto");
-
+      color: map-get($map: $color, $key: "primario");
+      font-weight: bold;
       body.light & {
         background-color: map-get($map: $color-light, $key: "cuarto");
       }

@@ -121,7 +121,7 @@
       display: block;
       width: 28px;
       height: 28px;
-      background-color: map-get($map: $color, $key: "secundario");
+      background-color: map-get($map: $color, $key: "acento");
       position: absolute;
       top: 0;
       left: unset;

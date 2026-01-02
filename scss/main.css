@@ -380,7 +380,7 @@ body.light .header .header__switch {
   display: block;
   width: 28px;
   height: 28px;
-  background-color: #0F1E3A;
+  background-color: #F43F5E;
   position: absolute;
   top: 0;
   left: unset;
@@ -981,6 +981,8 @@ body.light .contact__form textarea::placeholder {
 }
 .contact__form button:hover {
   background-color: #6EE7B7;
+  color: #0A1629;
+  font-weight: bold;
 }
 body.light .contact__form button:hover {
   background-color: #0B6E78;
@@ -1061,7 +1063,7 @@ body.light .footer .footer__container .footer__text {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 10%;
-  background: #FB7185;
+  background: #F43F5E;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   display: flex;
