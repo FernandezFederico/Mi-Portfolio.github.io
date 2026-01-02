@@ -7,6 +7,10 @@ body {
   background-size: cover;
   hyphens: none;
 
+  &.light {
+    background-color: map-get($map: $color-light, $key: "sexto");
+  }
+
   .main {
     position: relative;
     z-index: 2;

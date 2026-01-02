@@ -20,13 +20,13 @@
       line-height: 1;
       white-space: nowrap;
 
+      body.light & {
+        color: map-get($map: $color-light, $key: "quinto");
+      }
+
       @include custom-media(0px, 1279px) {
         white-space: normal;
         text-align: center;
-      }
-
-      body.light & {
-        color: map-get($map: $color, $key: "primario");
       }
     }
 
@@ -35,70 +35,92 @@
       font-size: clamp(1.3rem, 2vw, 2.5rem);
       margin-top: 2rem;
 
+      body.light & {
+        color: map-get($map: $color-light, $key: "quinto");
+      }
+
       .hero__name {
         color: map-get($map: $color, $key: "acento");
       }
 
       .hero__skills {
-        color: map-get($map: $color, $key: "cuarto");
+        color: map-get($map: $color, $key: "cuarto"); // Corregido: "cuarto"
+
+        body.light & {
+          color: map-get($map: $color-light, $key: "cuarto");
+        }
       }
 
       @include custom-media(0px, 1279px) {
         text-align: center;
-      }
-
-      body.light & {
-        color: map-get($map: $color, $key: "primario");
       }
     }
 
     .hero__actions {
       margin-top: 2rem;
       gap: 2rem;
-
       @include flexible(row, wrap, start, center);
 
       @include custom-media(0px, 1279px) {
         @include flexible(row, wrap, center, center);
       }
+
       .hero__link {
         display: inline-block;
         text-decoration: none;
-        color: map-get($map: $color, $key: "primario");
-        background-color: map-get($map: $color, $key: "cuarto");
+        color: map-get($map: $color-light, $key: "primario");
+        background-color: map-get($map: $color-light, $key: "cuarto");
         font-size: 24px;
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
-        
-        
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
         &:hover {
           background-color: map-get($map: $color, $key: "acento-hover");
-          transition: background-color 0.3s ease, transform 0.3s ease;
           transform: scale(1.03);
         }
-
       }
     }
 
     .hero__media {
       margin-top: 2rem;
       gap: 2rem;
-
-      .hero__link{
-        padding: 0.5rem;
-      }
-
       @include flexible(row, wrap, start, center);
+
       @include custom-media(0px, 1279px) {
         @include flexible(row, wrap, center, center);
       }
+
+      .hero__link {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        // Hover unificado que afecta al SVG interior
+        &:hover {
+          transform: translateY(-3px);
+          
+          .hero__svg {
+            fill: map-get($map: $color, $key: "acento-hover");
+          }
+        }
+      }
+
       .hero__svg {
         fill: map-get($map: $color, $key: "quinto");
         height: 2rem;
-        &:hover {
-          fill: map-get($map: $color, $key: "acento-hover");
+        transition: fill 0.3s ease;
+
+        body.light & {
+          fill: map-get($map: $color-light, $key: "quinto");
         }
-    
+        
+        // Corrección específica para Hover en modo Light
+        body.light .hero__link:hover & {
+          fill: map-get($map: $color, $key: "acento-hover"); 
+        }
       }
     }
   }
@@ -121,5 +143,4 @@
       object-fit: cover;
     }
   }
-
 }
