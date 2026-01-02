@@ -874,7 +874,7 @@ body.light .main__contact {
   text-align: center;
 }
 body.light .main__contact .contact__title {
-  color: #0B6E78;
+  color: #0b3173;
 }
 .main__contact .contact__info {
   display: grid;
@@ -909,8 +909,12 @@ body.light .main__contact .contact__title {
   height: 3rem;
 }
 .main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item span {
-  font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
   color: #E2E8F0;
+  font-weight: bold;
+}
+body.light .main__contact .contact__info .contact__media .contact__socialmedia .socialmedia__item span {
+  color: #0b3173;
 }
 
 .contact__form {
