@@ -182,6 +182,7 @@ body section {
   animation: svg 70s linear infinite alternate;
 }
 body.light .circulos {
+  background-color: #0A1629;
   transition: all 0.5s ease;
 }
 body.light .circulos .circulos__svg .path {
@@ -346,8 +347,7 @@ body.light .header .header__container .header__logo {
   transform: scaleX(0);
 }
 body.light .header .header__container .header__nav .nav__list .nav__item .nav__link {
-  color: #0A1629;
-  border: 2px solid #0A1629;
+  color: #162744;
 }
 .header .header__switch {
   background-color: #6EE7B7;

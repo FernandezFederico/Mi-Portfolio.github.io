@@ -78,8 +78,7 @@
             }
 
             body.light & {
-              color: map-get($map: $color, $key: "primario");
-              border: 2px solid map-get($map: $color, $key: "primario");
+              color: map-get($map: $color, $key: "terciario");
             }
           }
         }
