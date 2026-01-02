@@ -20,7 +20,7 @@ $color-dark: (
   "sexto": #F8FAFC,     // Casi blanco (títulos) - Reducido para menor fatiga visual
   "acento": #F43F5E,    // Rosa brillante - Ajustado para mejor contraste
   "acento-hover": #FB7185, // Estado hover más visible
-  "acento-disabled": #831843  // Estado deshabilitado con contraste adecuado
+  "acento-oscuro": #831843  // Estado deshabilitado con contraste adecuado
 );
 
 // Light Mode
@@ -29,11 +29,10 @@ $color-light: (
   "secundario": #E5EAF0,  // Fondo secundario: gris azulado claro
   "terciario": #D8E0EA,   // Elementos de fondo: gris azulado medio
   "cuarto": #0B6E78,      // Acento secundario: verde azulado oscuro
-  "quinto": #1A2234,      // Texto principal: azul muy oscuro
-  "sexto": #0F172A,       // Títulos: azul oscuro profundo
-  "acento": #BE2040,      // Color importante: rojo más oscuro
-  "acento-hover": #9C1A3D, // Hover del acento
-  "acento-disabled": #94A3B8 // Estado deshabilitado
+  "quinto": #0b3173,      // Texto principal: azul muy oscuro
+  "sexto": #94A3B8,       // Títulos: azul oscuro profundo
+  "acento": #F43F5E,      // Color importante: rojo más oscuro
+  "acento-oscuro": #831843, // Hover del acento
 );
 
 // Colores activos (por defecto dark mode)

@@ -14,14 +14,8 @@
     width: 100%;
     height: 100%;
 
-
     border: 2px solid map-get($map: $color, $key: "acento");
     border-radius: 50%;
-
-    body.light & {
-      border: 2px solid map-get($map: $color, $key: "primario");
-    }
-
     transition: all 0.3s ease-out;
   }
 }

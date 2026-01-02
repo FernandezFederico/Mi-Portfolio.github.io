@@ -20,7 +20,7 @@
           text-align: center;
 
           body.light & {
-            color: map-get($map: $color, $key: "primario");
+            color: map-get($map: $color-light, $key: "quinto");
           }
 
           @include custom-media(0px, 480px) {
@@ -43,7 +43,7 @@
           text-align: center;
 
           body.light & {
-            color: map-get($map: $color, $key: "primario");
+            color: map-get($map: $color-light, $key: "quinto");
           }
 
           @include custom-media(0px, 1279px) {
@@ -71,6 +71,7 @@
           max-width: 350px;
           border-radius: 0.5rem;
           overflow: hidden;
+          box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
 
           transition: transform 0.3s ease;
 

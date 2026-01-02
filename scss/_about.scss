@@ -33,7 +33,7 @@
           margin-top: 1rem;
 
           body.light & {
-            color: map-get($map: $color, $key: "primario");
+            color: map-get($map: $color-light, $key: "quinto");
           }
         }
 
@@ -46,7 +46,7 @@
 
 
           body.light & {
-            color: map-get($map: $color, $key: "primario");
+            color: map-get($map: $color-light, $key: "quinto");
           }
 
           @include custom-media(0px, 1279px) {

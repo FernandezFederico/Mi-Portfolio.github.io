@@ -16,7 +16,7 @@
   }
   
   body.light & {
-    border: 2px solid map-get($map: $color, $key: "primario");
+    background-color: map-get($map: $color-light, $key: "acento");
   }
 
 }
@@ -52,6 +52,7 @@
     height: 80svh;
     border: 1px solid map-get($map: $color, $key: "terciario");
     border-radius: 12px;
+    
     @include flexible(column, nowrap, space-evenly, center);
   }
 }
