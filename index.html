@@ -215,8 +215,6 @@
             <p class="card__body">
               Aplicación completa de comercio electrónico, utilizando el stack MEAN.
               Gestión de productos, usuarios y carritos de compras.
-              Aplicación completa de comercio electrónico, utilizando el stack MEAN.
-              Gestión de productos, usuarios y carritos de compras.
             </p>
             <a href="https://github.com/FernandezFederico/ecommerce-frontend_angular" class="card__button"
               target="_blank" rel="noopener noreferrer">
@@ -303,11 +301,11 @@
           </li>
         </ul>
         </div>
-        <form class="contact__form" action="https://formspree.io/f/movkbero" method="POST">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu email" required>
-        <textarea name="message" placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
+        <form id="contact__form" class="contact__form" action="https://formspree.io/f/movkbero" method="POST">
+          <input id="contact__name" type="text" name="name" placeholder="Tu nombre" required>
+          <input id="contact__email" type="email" name="email" placeholder="Tu email" required>
+          <textarea id="contact__text" name="message" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </section>

@@ -1,6 +1,5 @@
 // cursor personalizado
 import { cursorInit } from "./cursor_custom.js";
-
 // menu hamburguesa
 import { hamburgerMenu } from "./hamburger_menu.js";
 // dark mode
@@ -26,9 +25,6 @@ if (!isTouch) {
   const node1 = document.getElementById("cursor");
   node1.parentNode.removeChild(node1);
 }
-
-///ver que funcione en móvil... no verifico que desaparezca el cursor
-// verificar si corre el else...
 
 document.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".header__btn", ".header__panel", ".panel__link");

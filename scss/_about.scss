@@ -1,7 +1,7 @@
     .main__about {
       width: 80%;
       min-height: 60vh;
-      margin-top: 1rem;
+      margin-top: 100px;
       margin-bottom: 100px;
       font-family: map-get($map: $fuente, $key: "secundario");
 
@@ -13,9 +13,11 @@
 
       .about__figure {
         width: 100%;
-        @include flexible(column, nowrap, center, center);
         height: 100%;
+        margin-bottom: 75px;
         
+        @include flexible(column, nowrap, center, center);
+
         .about__img {
           width: clamp(15rem, 25vw, 25rem);
           border-radius: 1rem;

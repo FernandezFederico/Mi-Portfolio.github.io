@@ -787,7 +787,7 @@ body.light .main__works .works__info .works__text {
 .main__about {
   width: 80%;
   min-height: 60vh;
-  margin-top: 1rem;
+  margin-top: 100px;
   margin-bottom: 100px;
   font-family: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
   display: flex;
@@ -805,11 +805,12 @@ body.light .main__works .works__info .works__text {
 }
 .main__about .about__figure {
   width: 100%;
+  height: 100%;
+  margin-bottom: 75px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 .main__about .about__figure .about__img {
   width: clamp(15rem, 25vw, 25rem);
@@ -1064,8 +1065,7 @@ body.light .footer .footer__container .footer__text {
   height: 3.5rem;
   border-radius: 10%;
   background: #F43F5E;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
